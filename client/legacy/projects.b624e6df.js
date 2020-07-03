@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized$1, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, v as validate_slots, G as assign, H as exclude_internal_props, I as svg_element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, J as null_to_empty, o as insert_dev, p as append_dev, r as _slicedToArray, w as noop, K as _typeof, L as onMount, M as onDestroy, N as globals, x as space, g as element, t as text, y as create_component, z as query_selector_all, A as claim_space, k as claim_text, B as claim_component, C as mount_component, O as action_destroyer, q as listen_dev, P as is_function, u as set_data_dev, D as transition_in, E as transition_out, F as destroy_component, Q as run_all } from './client.96084c74.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized$1, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, v as validate_slots, G as assign, H as exclude_internal_props, I as svg_element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, J as null_to_empty, o as insert_dev, p as append_dev, r as _slicedToArray, w as noop, K as _typeof, L as onMount, M as onDestroy, N as beforeUpdate, O as afterUpdate, P as globals, x as space, g as element, t as text, y as create_component, z as query_selector_all, A as claim_space, k as claim_text, B as claim_component, C as mount_component, Q as action_destroyer, q as listen_dev, R as is_function, u as set_data_dev, D as transition_in, E as transition_out, F as destroy_component, T as run_all } from './client.499aa1e0.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -5404,58 +5404,6 @@ var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap,
     // to protect from tree shaking
 TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
 /*!
  * ScrollTrigger 3.3.4
  * https://greensock.com
@@ -6781,6 +6729,58 @@ ScrollTrigger.batch = function (targets, vars) {
 
 _getGSAP() && gsap$1.registerPlugin(ScrollTrigger);
 
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
 gsapWithCSS.registerPlugin(ScrollTrigger);
 function animate(node, _ref) {
   var type = _ref.type,
@@ -6789,7 +6789,7 @@ function animate(node, _ref) {
   var method = gsapWithCSS[type];
   return method(node, args);
 }
-function scrollMe(node, _ref2) {
+function triggerMe(node, _ref2) {
   var args = _extends({}, _ref2);
 
   var method = ScrollTrigger.create({
@@ -6798,6 +6798,7 @@ function scrollMe(node, _ref2) {
     start: 'center center',
     toggleActions: 'play none none reverse'
   });
+  console.log(node);
   return method;
 }
 
@@ -6830,7 +6831,7 @@ function create_fragment$1(ctx) {
   var div1;
   var p2;
   var t13;
-  var scrollMe_action;
+  var triggerMe_action;
   var t14;
   var div2;
   var t15;
@@ -6838,10 +6839,15 @@ function create_fragment$1(ctx) {
   var div3;
   var p3;
   var t17;
-  var scrollMe_action_1;
   var t18;
-  var div4;
+  var p4;
   var t19;
+  var t20;
+  var p5;
+  var t21;
+  var t22;
+  var div4;
+  var t23;
   var current;
   var mounted;
   var dispose;
@@ -6912,8 +6918,14 @@ function create_fragment$1(ctx) {
       p3 = element("p");
       t17 = text("testPin");
       t18 = space();
+      p4 = element("p");
+      t19 = text("testPin");
+      t20 = space();
+      p5 = element("p");
+      t21 = text("testPin");
+      t22 = space();
       div4 = element("div");
-      t19 = text("test");
+      t23 = text("test");
       this.h();
     },
     l: function claim(nodes) {
@@ -6956,6 +6968,7 @@ function create_fragment$1(ctx) {
       div0_nodes.forEach(detach_dev);
       t12 = claim_space(nodes);
       div1 = claim_element(nodes, "DIV", {
+        id: true,
         class: true
       });
       var div1_nodes = children(div1);
@@ -6980,34 +6993,47 @@ function create_fragment$1(ctx) {
       var p3_nodes = children(p3);
       t17 = claim_text(p3_nodes, "testPin");
       p3_nodes.forEach(detach_dev);
+      t18 = claim_space(div3_nodes);
+      p4 = claim_element(div3_nodes, "P", {});
+      var p4_nodes = children(p4);
+      t19 = claim_text(p4_nodes, "testPin");
+      p4_nodes.forEach(detach_dev);
+      t20 = claim_space(div3_nodes);
+      p5 = claim_element(div3_nodes, "P", {});
+      var p5_nodes = children(p5);
+      t21 = claim_text(p5_nodes, "testPin");
+      p5_nodes.forEach(detach_dev);
       div3_nodes.forEach(detach_dev);
-      t18 = claim_space(nodes);
+      t22 = claim_space(nodes);
       div4 = claim_element(nodes, "DIV", {
         class: true
       });
       var div4_nodes = children(div4);
-      t19 = claim_text(div4_nodes, "test");
+      t23 = claim_text(div4_nodes, "test");
       div4_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
       document.title = "Projects";
-      add_location(p0, file$1, 23, 0, 603);
-      add_location(p1, file$1, 24, 0, 694);
+      add_location(p0, file$1, 44, 0, 1139);
+      add_location(p1, file$1, 45, 0, 1230);
       attr_dev(h1, "class", "test");
-      add_location(h1, file$1, 35, 0, 1210);
+      add_location(h1, file$1, 56, 0, 1746);
       attr_dev(div0, "class", "spacer svelte-45udk8");
-      add_location(div0, file$1, 44, 0, 1382);
-      add_location(p2, file$1, 46, 2, 1487);
-      attr_dev(div1, "class", "pinned svelte-45udk8");
-      add_location(div1, file$1, 45, 0, 1413);
+      add_location(div0, file$1, 65, 0, 1918);
+      add_location(p2, file$1, 67, 2, 2037);
+      attr_dev(div1, "id", "anchor");
+      attr_dev(div1, "class", "trigger");
+      add_location(div1, file$1, 66, 0, 1949);
       attr_dev(div2, "class", "spacer svelte-45udk8");
-      add_location(div2, file$1, 48, 0, 1509);
-      add_location(p3, file$1, 50, 2, 1615);
+      add_location(div2, file$1, 69, 0, 2059);
+      add_location(p3, file$1, 71, 2, 2113);
+      add_location(p4, file$1, 72, 2, 2130);
+      add_location(p5, file$1, 73, 2, 2147);
       attr_dev(div3, "class", "pinned svelte-45udk8");
-      add_location(div3, file$1, 49, 0, 1540);
+      add_location(div3, file$1, 70, 0, 2090);
       attr_dev(div4, "class", "spacer svelte-45udk8");
-      add_location(div4, file$1, 52, 0, 1637);
+      add_location(div4, file$1, 75, 0, 2169);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -7042,9 +7068,15 @@ function create_fragment$1(ctx) {
       insert_dev(target, div3, anchor);
       append_dev(div3, p3);
       append_dev(p3, t17);
-      insert_dev(target, t18, anchor);
+      append_dev(div3, t18);
+      append_dev(div3, p4);
+      append_dev(p4, t19);
+      append_dev(div3, t20);
+      append_dev(div3, p5);
+      append_dev(p5, t21);
+      insert_dev(target, t22, anchor);
       insert_dev(target, div4, anchor);
-      append_dev(div4, t19);
+      append_dev(div4, t23);
       current = true;
 
       if (!mounted) {
@@ -7060,17 +7092,13 @@ function create_fragment$1(ctx) {
           x: 100,
           onComplete:
           /*animate_function*/
-          ctx[3]
+          ctx[4]
         })), listen_dev(h1, "click",
         /*testClick*/
-        ctx[2], false, false, false), action_destroyer(scrollMe_action = scrollMe.call(null, div1, {
+        ctx[2], false, false, false), action_destroyer(triggerMe_action = triggerMe.call(null, div1, {
           duration: 1,
           opacity: 0,
           x: 100
-        })), action_destroyer(scrollMe_action_1 = scrollMe.call(null, div3, {
-          duration: 1,
-          opacity: 0,
-          y: -100
         }))];
         mounted = true;
       }
@@ -7088,7 +7116,7 @@ function create_fragment$1(ctx) {
         x: 100,
         onComplete:
         /*animate_function*/
-        ctx[3]
+        ctx[4]
       });
       if (!current || dirty &
       /*msg*/
@@ -7137,7 +7165,7 @@ function create_fragment$1(ctx) {
       if (detaching) detach_dev(div2);
       if (detaching) detach_dev(t16);
       if (detaching) detach_dev(div3);
-      if (detaching) detach_dev(t18);
+      if (detaching) detach_dev(t22);
       if (detaching) detach_dev(div4);
       mounted = false;
       run_all(dispose);
@@ -7171,6 +7199,29 @@ function instance$1($$self, $$props, $$invalidate) {
     $$invalidate(1, msg = "GSAP 🐢 test success!");
   }
 
+  var trigger = function trigger() {
+    var st = ScrollTrigger.create({
+      trigger: ".pinned",
+      pin: true,
+      animation: gsapWithCSS.from(".pinned p", {
+        duration: 1,
+        opacity: 0,
+        y: -100,
+        stagger: 0.3
+      }),
+      start: "center center",
+      toggleActions: "play none none reverse"
+    }); //markers: true,
+
+    return st;
+  };
+
+  onMount(function () {
+    trigger();
+  });
+  onDestroy(function () {
+    trigger().disable();
+  });
   var writable_props = [];
   Object.keys($$props).forEach(function (key) {
     if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn("<Projects> was created with unknown prop '".concat(key, "'"));
@@ -7188,6 +7239,8 @@ function instance$1($$self, $$props, $$invalidate) {
     return {
       onMount: onMount,
       onDestroy: onDestroy,
+      beforeUpdate: beforeUpdate,
+      afterUpdate: afterUpdate,
       Icon: Icon,
       faArrowsAlt: faArrowsAlt,
       faArrowDown: faArrowDown,
@@ -7195,11 +7248,13 @@ function instance$1($$self, $$props, $$invalidate) {
       faBacon: faBacon,
       faFish: faFish,
       gsap: gsapWithCSS,
+      ScrollTrigger: ScrollTrigger,
       animate: animate,
-      scrollMe: scrollMe,
+      triggerMe: triggerMe,
       desc: desc,
       msg: msg,
-      testClick: testClick
+      testClick: testClick,
+      trigger: trigger
     };
   };
 
@@ -7212,7 +7267,7 @@ function instance$1($$self, $$props, $$invalidate) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [desc, msg, testClick, animate_function];
+  return [desc, msg, testClick, trigger, animate_function];
 }
 
 var Projects = /*#__PURE__*/function (_SvelteComponentDev) {

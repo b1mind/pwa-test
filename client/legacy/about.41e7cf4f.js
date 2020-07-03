@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, w as noop, x as space, t as text, A as claim_space, k as claim_text, f as _createClass, R as validate_each_argument, T as createEventDispatcher, U as toggle_class, q as listen_dev, u as set_data_dev, r as _slicedToArray, V as destroy_each, y as create_component, z as query_selector_all, B as claim_component, C as mount_component, D as transition_in, E as transition_out, F as destroy_component } from './client.96084c74.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, w as noop, x as space, t as text, A as claim_space, k as claim_text, f as _createClass, U as validate_each_argument, V as createEventDispatcher, W as toggle_class, q as listen_dev, u as set_data_dev, r as _slicedToArray, X as destroy_each, y as create_component, z as query_selector_all, B as claim_component, C as mount_component, D as transition_in, E as transition_out, F as destroy_component } from './client.499aa1e0.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -537,7 +537,7 @@ var Tabs = /*#__PURE__*/function (_SvelteComponentDev) {
 function _createSuper$3(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$3(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$3() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-var file$3 = "src\\routes\\about.svelte"; // (26:0) {:else}
+var file$3 = "src\\routes\\about.svelte"; // (27:0) {:else}
 
 function create_else_block(ctx) {
   var p;
@@ -556,7 +556,7 @@ function create_else_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$3, 26, 2, 618);
+      add_location(p, file$3, 27, 2, 638);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -570,7 +570,7 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(26:0) {:else}",
+    source: "(27:0) {:else}",
     ctx: ctx
   });
   return block;
@@ -579,29 +579,49 @@ function create_else_block(ctx) {
 
 function create_if_block_1(ctx) {
   var p;
-  var t;
+  var t0;
+  var t1;
+  var a;
+  var t2;
   var block = {
     c: function create() {
       p = element("p");
-      t = text("Bio");
+      t0 = text("Bio");
+      t1 = space();
+      a = element("a");
+      t2 = text("test");
       this.h();
     },
     l: function claim(nodes) {
       p = claim_element(nodes, "P", {});
       var p_nodes = children(p);
-      t = claim_text(p_nodes, "Bio");
+      t0 = claim_text(p_nodes, "Bio");
       p_nodes.forEach(detach_dev);
+      t1 = claim_space(nodes);
+      a = claim_element(nodes, "A", {
+        href: true
+      });
+      var a_nodes = children(a);
+      t2 = claim_text(a_nodes, "test");
+      a_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$3, 24, 2, 597);
+      add_location(p, file$3, 24, 2, 580);
+      attr_dev(a, "href", "projects#anchor");
+      add_location(a, file$3, 25, 2, 593);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
-      append_dev(p, t);
+      append_dev(p, t0);
+      insert_dev(target, t1, anchor);
+      insert_dev(target, a, anchor);
+      append_dev(a, t2);
     },
     d: function destroy(detaching) {
       if (detaching) detach_dev(p);
+      if (detaching) detach_dev(t1);
+      if (detaching) detach_dev(a);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
@@ -632,7 +652,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$3, 22, 2, 505);
+      add_location(p, file$3, 22, 2, 488);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
