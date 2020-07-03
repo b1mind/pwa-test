@@ -3035,27 +3035,27 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/blog\.json$/, /^\/blog\/([^\/]+?)\.json$/, /^\/test\/?$/];
 var components = [{
   js: function js() {
-    return import('./index.a75da1b6.js');
+    return import('./index.52073588.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./projects.cd2ef36e.js');
+    return import('./projects.ec6191c0.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./about.3c8c18c5.js');
+    return import('./about.acb142de.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.842f7e70.js');
+    return import('./index.f618ac0a.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./[slug].14d04994.js');
+    return import('./[slug].510fb05a.js');
   },
   css: []
 }];

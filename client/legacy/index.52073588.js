@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, v as validate_slots, g as element, t as text, h as claim_element, j as children, k as claim_text, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, q as listen_dev, r as _slicedToArray, u as set_data_dev, w as noop, x as space, y as create_component, z as query_selector_all, A as claim_space, B as claim_component, C as mount_component, D as transition_in, E as transition_out, F as destroy_component } from './client.12aaee5c.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, v as validate_slots, g as element, t as text, h as claim_element, j as children, k as claim_text, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, q as listen_dev, r as _slicedToArray, u as set_data_dev, w as noop, x as space, y as create_component, z as query_selector_all, A as claim_space, B as claim_component, C as mount_component, D as transition_in, E as transition_out, F as destroy_component } from './client.96084c74.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -196,7 +196,7 @@ function create_else_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(p, "class", "test svelte-u0k2wk");
-      add_location(p, file$1, 21, 60, 570);
+      add_location(p, file$1, 21, 60, 569);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -242,7 +242,7 @@ function create_if_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(p, "class", "test svelte-u0k2wk");
-      add_location(p, file$1, 21, 21, 531);
+      add_location(p, file$1, 21, 21, 530);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -438,29 +438,29 @@ function create_fragment$1(ctx) {
       attr_dev(h1, "class", "svelte-u0k2wk");
       add_location(h1, file$1, 10, 0, 214);
       attr_dev(img0, "alt", "Success Kid");
-      if (img0.src !== (img0_src_value = "/images/successkid.jpg")) attr_dev(img0, "src", img0_src_value);
+      if (img0.src !== (img0_src_value = "images/successkid.jpg")) attr_dev(img0, "src", img0_src_value);
       attr_dev(img0, "class", "svelte-u0k2wk");
       add_location(img0, file$1, 16, 6, 358);
-      add_location(figcaption0, file$1, 17, 6, 419);
+      add_location(figcaption0, file$1, 17, 6, 418);
       attr_dev(figure0, "class", "svelte-u0k2wk");
       add_location(figure0, file$1, 14, 4, 283);
       attr_dev(div0, "class", "card");
       add_location(div0, file$1, 13, 2, 260);
       attr_dev(img1, "alt", "Success Kid");
-      if (img1.src !== (img1_src_value = "/images/successkid.jpg")) attr_dev(img1, "src", img1_src_value);
+      if (img1.src !== (img1_src_value = "images/successkid.jpg")) attr_dev(img1, "src", img1_src_value);
       attr_dev(img1, "class", "svelte-u0k2wk");
-      add_location(img1, file$1, 28, 6, 719);
+      add_location(img1, file$1, 28, 6, 718);
       attr_dev(strong, "class", "svelte-u0k2wk");
-      add_location(strong, file$1, 32, 10, 842);
+      add_location(strong, file$1, 32, 10, 840);
       attr_dev(p, "class", "svelte-u0k2wk");
-      add_location(p, file$1, 30, 8, 801);
-      add_location(figcaption1, file$1, 29, 6, 780);
+      add_location(p, file$1, 30, 8, 799);
+      add_location(figcaption1, file$1, 29, 6, 778);
       attr_dev(figure1, "class", "svelte-u0k2wk");
-      add_location(figure1, file$1, 26, 4, 663);
+      add_location(figure1, file$1, 26, 4, 662);
       attr_dev(div1, "class", "card");
-      add_location(div1, file$1, 25, 2, 640);
+      add_location(div1, file$1, 25, 2, 639);
       attr_dev(div2, "class", "card");
-      add_location(div2, file$1, 38, 2, 947);
+      add_location(div2, file$1, 38, 2, 945);
       attr_dev(div3, "class", "grid svelte-u0k2wk");
       add_location(div3, file$1, 11, 0, 238);
     },
