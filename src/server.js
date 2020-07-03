@@ -5,7 +5,9 @@ import * as sapper from '@sapper/server'
 
 const { PORT, NODE_ENV } = process.env
 const dev = NODE_ENV === 'development'
-const url = dev ? '/' : 'pwa-test'
+const url = '/'
+// const url = 'pwa-test'
+console.log(dev, url)
 
 polka() // You can also use Express
   .use(url, compression({ threshold: 0 }), sirv('static', { dev }), sapper.middleware())

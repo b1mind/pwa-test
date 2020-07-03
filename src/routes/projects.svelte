@@ -1,10 +1,12 @@
 <script>
-  import { onMount, onDestroy } from 'svelte'
+  import { onMount, onDestroy, beforeUpdate, afterUpdate } from 'svelte'
+  //import { init } from 'svelte/internal';
   import Icon from 'fa-svelte'
   import { faArrowsAlt, faArrowDown, faFeather, faBacon, faFish } from '@fortawesome/free-solid-svg-icons'
   import { gsap } from 'gsap'
-
-  import { animate, scrollMe } from '../gsap.js'
+  import { ScrollTrigger } from 'gsap/ScrollTrigger'
+  import { animate, triggerMe } from '../gsap.js'
+  gsap.registerPlugin(ScrollTrigger)
 
   let desc = false
   let msg = 'click me'
@@ -15,6 +17,26 @@
     gsap.to(test, { border: '0px', scale: 1.5, duration: 0.5, yoyo: true, repeat: 5 })
     msg = 'GSAP 🐢 test success!'
   }
+
+  const trigger = () => {
+    let st = ScrollTrigger.create({
+      trigger: '.pinned',
+      pin: true,
+      animation: gsap.from('.pinned p', { duration: 1, opacity: 0, y: -100, stagger: 0.3 }),
+      start: 'center center',
+      toggleActions: 'play none none reverse',
+      //markers: true,
+    })
+    return st
+  }
+
+  onMount(() => {
+    trigger()
+  })
+
+  onDestroy(() => {
+    trigger().disable()
+  })
 </script>
 
 <svelte:head>
@@ -43,11 +65,13 @@ More
 <Icon icon={faBacon} />
 Really
 <div class="spacer">test</div>
-<div class="pinned" use:scrollMe={{ duration: 1, opacity: 0, x: 100 }}>
+<div id="anchor" class="trigger" use:triggerMe={{ duration: 1, opacity: 0, x: 100 }}>
   <p>testPin</p>
 </div>
 <div class="spacer">test</div>
-<div class="pinned" use:scrollMe={{ duration: 1, opacity: 0, y: -100 }}>
+<div class="pinned">
+  <p>testPin</p>
+  <p>testPin</p>
   <p>testPin</p>
 </div>
 <div class="spacer">test</div>

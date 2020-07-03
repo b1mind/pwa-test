@@ -6,7 +6,7 @@
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --basepath pwa-test --legacy",
-    "deploy": "npm run clean && npm run export && node ./scripts/deploy.js",
+    "deploy": "npm run export && node ./scripts/deploy.js",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
@@ -14,8 +14,6 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
-    "gh-pages": "^3.1.0",
-    "gsap": "file:gsap-bonus.tgz",
     "polka": "next",
     "sirv": "^0.4.0"
   },
@@ -44,6 +42,8 @@
     "rollup-plugin-terser": "^5.3.0",
     "sapper": "^0.27.0",
     "svelte": "^3.0.0",
-    "svelte-preprocess": "^3.7.4"
+    "svelte-preprocess": "^3.7.4",
+    "gh-pages": "^3.1.0",
+    "gsap": "file:gsap-bonus.tgz"
   }
 }

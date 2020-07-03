@@ -18,11 +18,12 @@
 <Header />
 <h1>About Svelte</h1>
 
-<Tabs activeItem={activeItem} items={items} on:tabChange={tabChange} />
+<Tabs {activeItem} {items} on:tabChange={tabChange} />
 {#if activeItem === 'Bio'}
   <p>This is the 'about' page. There's not much here.</p>
 {:else if activeItem === 'Story'}
   <p>Bio</p>
+  <a href="projects#anchor">test</a>
 {:else}
   <p>History of svelte</p>
 {/if}

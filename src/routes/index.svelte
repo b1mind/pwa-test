@@ -14,7 +14,7 @@
   <div class="card">
     <figure>
       <EmailBtn email="max@none.com" btnText="Email Max" />
-      <img alt="Success Kid" src="/images/successkid.jpg" />
+      <img alt="Success Kid" src="images/successkid.jpg" />
       <figcaption>Have fun with Sapper!</figcaption>
 
     </figure>
@@ -31,7 +31,7 @@
   <div class="card">
     <figure>
       <EmailBtn email="none@none.com" />
-      <img alt="Success Kid" src="/images/successkid.jpg" />
+      <img alt="Success Kid" src="images/successkid.jpg" />
       <figcaption>
         <p>
           You too can be a
