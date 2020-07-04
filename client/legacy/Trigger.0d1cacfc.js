@@ -1,4 +1,19 @@
-import { H as _typeof, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized$1, e as dispatch_dev, S as SvelteComponentDev, I as create_slot, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, J as action_destroyer, r as _slicedToArray, K as update_slot, E as transition_in, F as transition_out } from './client.636705fe.js';
+import { H as _typeof, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized$1, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, I as create_slot, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, J as action_destroyer, r as _slicedToArray, K as update_slot, L as is_function, E as transition_in, F as transition_out } from './client.44baa49c.js';
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -16,6 +31,40 @@ function _extends() {
   };
 
   return _extends.apply(this, arguments);
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
 }
 
 function _assertThisInitialized(self) {
@@ -6545,6 +6594,53 @@ ScrollTrigger.batch = function (targets, vars) {
 
 _getGSAP() && gsap$1.registerPlugin(ScrollTrigger);
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+gsapWithCSS.registerPlugin(ScrollTrigger);
+function animate(node, _ref) {
+  var type = _ref.type,
+      args = _objectWithoutProperties(_ref, ["type"]);
+
+  var method = gsapWithCSS[type];
+  return method(node, args);
+}
+function triggerMe(node, _ref2) {
+  var args = _extends({}, _ref2);
+
+  var method = ScrollTrigger.create({
+    trigger: node,
+    animation: gsapWithCSS.from(node, args),
+    start: 'center center',
+    toggleActions: 'play none none reverse' //markers: true,
+
+  });
+  console.log(node);
+  return method;
+}
+function pinScrub(node, _ref3) {
+  var args = _extends({}, _ref3);
+
+  var st = ScrollTrigger.create({
+    trigger: node,
+    //pin: true,
+    //scrub: true,
+    animation: gsapWithCSS.from(node.children, _objectSpread({}, args)),
+    start: 'center center',
+    toggleActions: 'play none none reverse' //markers: true,
+
+  });
+  console.log(node);
+  return st;
+}
+function killTriggers() {
+  var allTriggers = ScrollTrigger.getAll();
+  console.log(allTriggers);
+  allTriggers.forEach(function (t) {
+    t.kill();
+  });
+}
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -6552,7 +6648,7 @@ var file = "src\\components\\shared\\Trigger.svelte";
 
 function create_fragment(ctx) {
   var div;
-  var trigger_action;
+  var pinScrub_action;
   var current;
   var mounted;
   var dispose;
@@ -6579,7 +6675,7 @@ function create_fragment(ctx) {
     },
     h: function hydrate() {
       attr_dev(div, "class", "triggered svelte-15wlzz0");
-      add_location(div, file, 20, 0, 496);
+      add_location(div, file, 6, 0, 124);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -6591,9 +6687,9 @@ function create_fragment(ctx) {
       current = true;
 
       if (!mounted) {
-        dispose = action_destroyer(trigger_action =
-        /*trigger*/
-        ctx[0].call(null, div, {}));
+        dispose = action_destroyer(pinScrub_action = pinScrub.call(null, div,
+        /*animation*/
+        ctx[0]));
         mounted = true;
       }
     },
@@ -6610,6 +6706,12 @@ function create_fragment(ctx) {
           ctx[1], dirty, null, null);
         }
       }
+
+      if (pinScrub_action && is_function(pinScrub_action.update) && dirty &
+      /*animation*/
+      1) pinScrub_action.update.call(null,
+      /*animation*/
+      ctx[0]);
     },
     i: function intro(local) {
       if (current) return;
@@ -6638,27 +6740,12 @@ function create_fragment(ctx) {
 }
 
 function instance($$self, $$props, $$invalidate) {
-  gsapWithCSS.registerPlugin(ScrollTrigger);
-
-  var trigger = function trigger(node, _ref3) {
-    var args = _extends({}, _ref3);
-
-    var st = ScrollTrigger.create({
-      trigger: node,
-      pin: true,
-      scrub: true,
-      animation: gsapWithCSS.from(node.children, {
-        x: "-=100",
-        stagger: 0.3
-      }),
-      start: "center center",
-      toggleActions: "play none none reverse"
-    }); //markers: true,
-
-    return st;
-  };
-
-  var writable_props = [];
+  var _$$props$animation = $$props.animation,
+      animation = _$$props$animation === void 0 ? {
+    x: "-=100",
+    stagger: 0.3
+  } : _$$props$animation;
+  var writable_props = ["animation"];
   Object.keys($$props).forEach(function (key) {
     if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<Trigger> was created with unknown prop '".concat(key, "'"));
   });
@@ -6668,18 +6755,26 @@ function instance($$self, $$props, $$invalidate) {
   validate_slots("Trigger", $$slots, ['default']);
 
   $$self.$set = function ($$props) {
+    if ("animation" in $$props) $$invalidate(0, animation = $$props.animation);
     if ("$$scope" in $$props) $$invalidate(1, $$scope = $$props.$$scope);
   };
 
   $$self.$capture_state = function () {
     return {
-      gsap: gsapWithCSS,
-      ScrollTrigger: ScrollTrigger,
-      trigger: trigger
+      pinScrub: pinScrub,
+      animation: animation
     };
   };
 
-  return [trigger, $$scope, $$slots];
+  $$self.$inject_state = function ($$props) {
+    if ("animation" in $$props) $$invalidate(0, animation = $$props.animation);
+  };
+
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+
+  return [animation, $$scope, $$slots];
 }
 
 var Trigger = /*#__PURE__*/function (_SvelteComponentDev) {
@@ -6693,7 +6788,9 @@ var Trigger = /*#__PURE__*/function (_SvelteComponentDev) {
     _classCallCheck(this, Trigger);
 
     _this = _super.call(this, options);
-    init(_assertThisInitialized$1(_this), options, instance, create_fragment, safe_not_equal, {});
+    init(_assertThisInitialized$1(_this), options, instance, create_fragment, safe_not_equal, {
+      animation: 0
+    });
     dispatch_dev("SvelteRegisterComponent", {
       component: _assertThisInitialized$1(_this),
       tagName: "Trigger",
@@ -6703,7 +6800,17 @@ var Trigger = /*#__PURE__*/function (_SvelteComponentDev) {
     return _this;
   }
 
+  _createClass(Trigger, [{
+    key: "animation",
+    get: function get() {
+      throw new Error("<Trigger>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    },
+    set: function set(value) {
+      throw new Error("<Trigger>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    }
+  }]);
+
   return Trigger;
 }(SvelteComponentDev);
 
-export { ScrollTrigger as S, Trigger as T, _extends as _, gsapWithCSS as g };
+export { ScrollTrigger as S, Trigger as T, animate as a, gsapWithCSS as g, killTriggers as k, triggerMe as t };

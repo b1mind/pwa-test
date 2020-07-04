@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, w as noop, y as space, t as text, B as claim_space, k as claim_text, f as _createClass, Z as validate_each_argument, $ as createEventDispatcher, V as toggle_class, q as listen_dev, u as set_data_dev, r as _slicedToArray, a0 as destroy_each, z as create_component, A as query_selector_all, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component } from './client.636705fe.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, w as noop, y as space, t as text, B as claim_space, k as claim_text, f as _createClass, Z as validate_each_argument, $ as createEventDispatcher, W as toggle_class, q as listen_dev, u as set_data_dev, r as _slicedToArray, a0 as destroy_each, z as create_component, A as query_selector_all, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component } from './client.44baa49c.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -34,7 +34,7 @@ function create_fragment(ctx) {
       this.h();
     },
     h: function hydrate() {
-      if (img.src !== (img_src_value = "/images/svelte.png")) attr_dev(img, "src", img_src_value);
+      if (img.src !== (img_src_value = "images/svelte.png")) attr_dev(img, "src", img_src_value);
       attr_dev(img, "alt", "logo");
       attr_dev(img, "class", "svelte-1xbat5n");
       add_location(img, file, 6, 4, 41);
