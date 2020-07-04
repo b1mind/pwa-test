@@ -1,4 +1,5 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, v as validate_slots, g as element, t as text, h as claim_element, j as children, k as claim_text, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, q as listen_dev, r as _slicedToArray, u as set_data_dev, w as noop, x as space, y as create_component, z as query_selector_all, A as claim_space, B as claim_component, C as mount_component, D as transition_in, E as transition_out, F as destroy_component } from './client.499aa1e0.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, v as validate_slots, g as element, t as text, h as claim_element, j as children, k as claim_text, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, q as listen_dev, r as _slicedToArray, u as set_data_dev, w as noop, x as onMount, y as space, z as create_component, A as query_selector_all, B as claim_space, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component } from './client.636705fe.js';
+import { T as Trigger } from './Trigger.1cbfa752.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -174,7 +175,7 @@ var EmailBtn = /*#__PURE__*/function (_SvelteComponentDev) {
 function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$1() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-var file$1 = "src\\routes\\index.svelte"; // (22:53) {:else}
+var file$1 = "src\\routes\\index.svelte"; // (25:53) {:else}
 
 function create_else_block(ctx) {
   var p;
@@ -196,7 +197,7 @@ function create_else_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(p, "class", "test svelte-u0k2wk");
-      add_location(p, file$1, 21, 60, 569);
+      add_location(p, file$1, 24, 60, 665);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -211,11 +212,11 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(22:53) {:else}",
+    source: "(25:53) {:else}",
     ctx: ctx
   });
   return block;
-} // (22:4) {#if val === 420}
+} // (25:4) {#if val === 420}
 
 
 function create_if_block(ctx) {
@@ -242,7 +243,7 @@ function create_if_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(p, "class", "test svelte-u0k2wk");
-      add_location(p, file$1, 21, 21, 530);
+      add_location(p, file$1, 24, 21, 626);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -257,7 +258,7 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(22:4) {#if val === 420}",
+    source: "(25:4) {#if val === 420}",
     ctx: ctx
   });
   return block;
@@ -268,7 +269,7 @@ function create_fragment$1(ctx) {
   var h1;
   var t1;
   var t2;
-  var div3;
+  var div2;
   var div0;
   var figure0;
   var t3;
@@ -291,8 +292,6 @@ function create_fragment$1(ctx) {
   var strong;
   var t11;
   var t12;
-  var t13;
-  var div2;
   var current;
   var emailbtn0 = new EmailBtn({
     props: {
@@ -323,7 +322,7 @@ function create_fragment$1(ctx) {
       h1 = element("h1");
       t1 = text("Great success!");
       t2 = space();
-      div3 = element("div");
+      div2 = element("div");
       div0 = element("div");
       figure0 = element("figure");
       create_component(emailbtn0.$$.fragment);
@@ -347,8 +346,6 @@ function create_fragment$1(ctx) {
       strong = element("strong");
       t11 = text("cool kid");
       t12 = text("\n          use Svelte");
-      t13 = space();
-      div2 = element("div");
       this.h();
     },
     l: function claim(nodes) {
@@ -362,11 +359,11 @@ function create_fragment$1(ctx) {
       t1 = claim_text(h1_nodes, "Great success!");
       h1_nodes.forEach(detach_dev);
       t2 = claim_space(nodes);
-      div3 = claim_element(nodes, "DIV", {
+      div2 = claim_element(nodes, "DIV", {
         class: true
       });
-      var div3_nodes = children(div3);
-      div0 = claim_element(div3_nodes, "DIV", {
+      var div2_nodes = children(div2);
+      div0 = claim_element(div2_nodes, "DIV", {
         class: true
       });
       var div0_nodes = children(div0);
@@ -390,8 +387,8 @@ function create_fragment$1(ctx) {
       t6 = claim_space(div0_nodes);
       if_block.l(div0_nodes);
       div0_nodes.forEach(detach_dev);
-      t7 = claim_space(div3_nodes);
-      div1 = claim_element(div3_nodes, "DIV", {
+      t7 = claim_space(div2_nodes);
+      div1 = claim_element(div2_nodes, "DIV", {
         class: true
       });
       var div1_nodes = children(div1);
@@ -425,52 +422,45 @@ function create_fragment$1(ctx) {
       figcaption1_nodes.forEach(detach_dev);
       figure1_nodes.forEach(detach_dev);
       div1_nodes.forEach(detach_dev);
-      t13 = claim_space(div3_nodes);
-      div2 = claim_element(div3_nodes, "DIV", {
-        class: true
-      });
-      children(div2).forEach(detach_dev);
-      div3_nodes.forEach(detach_dev);
+      div2_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
       document.title = "Sapper project template";
       attr_dev(h1, "class", "svelte-u0k2wk");
-      add_location(h1, file$1, 10, 0, 214);
+      add_location(h1, file$1, 12, 0, 309);
       attr_dev(img0, "alt", "Success Kid");
       if (img0.src !== (img0_src_value = "images/successkid.jpg")) attr_dev(img0, "src", img0_src_value);
       attr_dev(img0, "class", "svelte-u0k2wk");
-      add_location(img0, file$1, 16, 6, 358);
-      add_location(figcaption0, file$1, 17, 6, 418);
+      add_location(img0, file$1, 19, 6, 454);
+      add_location(figcaption0, file$1, 20, 6, 514);
       attr_dev(figure0, "class", "svelte-u0k2wk");
-      add_location(figure0, file$1, 14, 4, 283);
+      add_location(figure0, file$1, 16, 4, 378);
       attr_dev(div0, "class", "card");
-      add_location(div0, file$1, 13, 2, 260);
+      add_location(div0, file$1, 15, 2, 355);
       attr_dev(img1, "alt", "Success Kid");
       if (img1.src !== (img1_src_value = "images/successkid.jpg")) attr_dev(img1, "src", img1_src_value);
       attr_dev(img1, "class", "svelte-u0k2wk");
-      add_location(img1, file$1, 28, 6, 718);
+      add_location(img1, file$1, 31, 6, 814);
       attr_dev(strong, "class", "svelte-u0k2wk");
-      add_location(strong, file$1, 32, 10, 840);
+      add_location(strong, file$1, 35, 10, 936);
       attr_dev(p, "class", "svelte-u0k2wk");
-      add_location(p, file$1, 30, 8, 799);
-      add_location(figcaption1, file$1, 29, 6, 778);
+      add_location(p, file$1, 33, 8, 895);
+      add_location(figcaption1, file$1, 32, 6, 874);
       attr_dev(figure1, "class", "svelte-u0k2wk");
-      add_location(figure1, file$1, 26, 4, 662);
+      add_location(figure1, file$1, 29, 4, 758);
       attr_dev(div1, "class", "card");
-      add_location(div1, file$1, 25, 2, 639);
-      attr_dev(div2, "class", "card");
-      add_location(div2, file$1, 38, 2, 945);
-      attr_dev(div3, "class", "grid svelte-u0k2wk");
-      add_location(div3, file$1, 11, 0, 238);
+      add_location(div1, file$1, 28, 2, 735);
+      attr_dev(div2, "class", "grid svelte-u0k2wk");
+      add_location(div2, file$1, 13, 0, 333);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
       insert_dev(target, h1, anchor);
       append_dev(h1, t1);
       insert_dev(target, t2, anchor);
-      insert_dev(target, div3, anchor);
-      append_dev(div3, div0);
+      insert_dev(target, div2, anchor);
+      append_dev(div2, div0);
       append_dev(div0, figure0);
       mount_component(emailbtn0, figure0, null);
       append_dev(figure0, t3);
@@ -480,8 +470,8 @@ function create_fragment$1(ctx) {
       append_dev(figcaption0, t5);
       append_dev(div0, t6);
       if_block.m(div0, null);
-      append_dev(div3, t7);
-      append_dev(div3, div1);
+      append_dev(div2, t7);
+      append_dev(div2, div1);
       append_dev(div1, figure1);
       mount_component(emailbtn1, figure1, null);
       append_dev(figure1, t8);
@@ -493,8 +483,6 @@ function create_fragment$1(ctx) {
       append_dev(p, strong);
       append_dev(strong, t11);
       append_dev(p, t12);
-      append_dev(div3, t13);
-      append_dev(div3, div2);
       current = true;
     },
     p: function update(ctx, _ref) {
@@ -518,7 +506,7 @@ function create_fragment$1(ctx) {
       if (detaching) detach_dev(t0);
       if (detaching) detach_dev(h1);
       if (detaching) detach_dev(t2);
-      if (detaching) detach_dev(div3);
+      if (detaching) detach_dev(div2);
       destroy_component(emailbtn0);
       if_block.d();
       destroy_component(emailbtn1);
@@ -548,6 +536,8 @@ function instance$1($$self, $$props, $$invalidate) {
 
   $$self.$capture_state = function () {
     return {
+      onMount: onMount,
+      Trigger: Trigger,
       EmailBtn: EmailBtn,
       val: val,
       someString: someString

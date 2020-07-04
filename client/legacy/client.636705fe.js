@@ -1104,6 +1104,25 @@ function attr(node, attribute, value) {
   if (value == null) node.removeAttribute(attribute);else if (node.getAttribute(attribute) !== value) node.setAttribute(attribute, value);
 }
 
+function set_attributes(node, attributes) {
+  // @ts-ignore
+  var descriptors = Object.getOwnPropertyDescriptors(node.__proto__);
+
+  for (var key in attributes) {
+    if (attributes[key] == null) {
+      node.removeAttribute(key);
+    } else if (key === 'style') {
+      node.style.cssText = attributes[key];
+    } else if (key === '__value') {
+      node.value = node[key] = attributes[key];
+    } else if (descriptors[key] && descriptors[key].set) {
+      node[key] = attributes[key];
+    } else {
+      attr(node, key, attributes[key]);
+    }
+  }
+}
+
 function children(element) {
   return Array.from(element.childNodes);
 }
@@ -3039,27 +3058,27 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/blog\.json$/, /^\/blog\/([^\/]+?)\.json$/, /^\/test\/?$/];
 var components = [{
   js: function js() {
-    return import('./index.ee49bcac.js');
+    return import('./index.937e9d8b.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./projects.b624e6df.js');
+    return import('./projects.f7f5111b.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./about.41e7cf4f.js');
+    return import('./about.3a655fea.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.0c04c9fc.js');
+    return import('./index.7adf957b.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./[slug].f265ea04.js');
+    return import('./[slug].f0c341fa.js');
   },
   css: []
 }];
@@ -3915,4 +3934,4 @@ start({
   target: document.querySelector('#sapper')
 });
 
-export { claim_space as A, claim_component as B, mount_component as C, transition_in as D, transition_out as E, destroy_component as F, assign as G, exclude_internal_props as H, svg_element as I, null_to_empty as J, _typeof as K, onMount as L, onDestroy as M, beforeUpdate as N, afterUpdate as O, globals as P, action_destroyer as Q, is_function as R, SvelteComponentDev as S, run_all as T, validate_each_argument as U, createEventDispatcher as V, toggle_class as W, destroy_each as X, _asyncToGenerator as Y, regenerator as Z, _inherits as _, _getPrototypeOf as a, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, _createClass as f, element as g, claim_element as h, init as i, children as j, claim_text as k, detach_dev as l, attr_dev as m, add_location as n, insert_dev as o, append_dev as p, listen_dev as q, _slicedToArray as r, safe_not_equal as s, text as t, set_data_dev as u, validate_slots as v, noop as w, space as x, create_component as y, query_selector_all as z };
+export { createEventDispatcher as $, query_selector_all as A, claim_space as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, _typeof as H, create_slot as I, action_destroyer as J, update_slot as K, assign as L, exclude_internal_props as M, svg_element as N, null_to_empty as O, onDestroy as P, beforeUpdate as Q, afterUpdate as R, SvelteComponentDev as S, globals as T, set_attributes as U, toggle_class as V, is_function as W, get_spread_update as X, run_all as Y, validate_each_argument as Z, _inherits as _, _getPrototypeOf as a, destroy_each as a0, _asyncToGenerator as a1, regenerator as a2, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, _createClass as f, element as g, claim_element as h, init as i, children as j, claim_text as k, detach_dev as l, attr_dev as m, add_location as n, insert_dev as o, append_dev as p, listen_dev as q, _slicedToArray as r, safe_not_equal as s, text as t, set_data_dev as u, validate_slots as v, noop as w, onMount as x, space as y, create_component as z };

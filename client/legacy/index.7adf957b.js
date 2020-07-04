@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, U as validate_each_argument, v as validate_slots, g as element, t as text, h as claim_element, j as children, k as claim_text, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, u as set_data_dev, x as space, z as query_selector_all, A as claim_space, r as _slicedToArray, w as noop, X as destroy_each } from './client.499aa1e0.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, Z as validate_each_argument, v as validate_slots, g as element, t as text, y as space, h as claim_element, j as children, k as claim_text, l as detach_dev, B as claim_space, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, u as set_data_dev, A as query_selector_all, r as _slicedToArray, w as noop, a0 as destroy_each } from './client.636705fe.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -9,22 +9,24 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[1] = list[i];
   return child_ctx;
-} // (28:1) {#each posts as post}
+} // (22:2) {#each posts as post}
 
 
 function create_each_block(ctx) {
   var li;
   var a;
-  var t_value =
+  var t0_value =
   /*post*/
   ctx[1].title + "";
-  var t;
+  var t0;
   var a_href_value;
+  var t1;
   var block = {
     c: function create() {
       li = element("li");
       a = element("a");
-      t = text(t_value);
+      t0 = text(t0_value);
+      t1 = space();
       this.h();
     },
     l: function claim(nodes) {
@@ -35,8 +37,9 @@ function create_each_block(ctx) {
         href: true
       });
       var a_nodes = children(a);
-      t = claim_text(a_nodes, t_value);
+      t0 = claim_text(a_nodes, t0_value);
       a_nodes.forEach(detach_dev);
+      t1 = claim_space(li_nodes);
       li_nodes.forEach(detach_dev);
       this.h();
     },
@@ -45,20 +48,21 @@ function create_each_block(ctx) {
       attr_dev(a, "href", a_href_value = "blog/" +
       /*post*/
       ctx[1].slug);
-      add_location(a, file, 32, 6, 971);
-      add_location(li, file, 32, 2, 967);
+      add_location(a, file, 27, 6, 587);
+      add_location(li, file, 26, 4, 576);
     },
     m: function mount(target, anchor) {
       insert_dev(target, li, anchor);
       append_dev(li, a);
-      append_dev(a, t);
+      append_dev(a, t0);
+      append_dev(li, t1);
     },
     p: function update(ctx, dirty) {
       if (dirty &
       /*posts*/
-      1 && t_value !== (t_value =
+      1 && t0_value !== (t0_value =
       /*post*/
-      ctx[1].title + "")) set_data_dev(t, t_value);
+      ctx[1].title + "")) set_data_dev(t0, t0_value);
 
       if (dirty &
       /*posts*/
@@ -76,7 +80,7 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(28:1) {#each posts as post}",
+    source: "(22:2) {#each posts as post}",
     ctx: ctx
   });
   return block;
@@ -113,7 +117,7 @@ function create_fragment(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      var head_nodes = query_selector_all("[data-svelte=\"svelte-hfp9t8\"]", document.head);
+      var head_nodes = query_selector_all("[data-svelte=\"svelte-10h7psl\"]", document.head);
       head_nodes.forEach(detach_dev);
       t0 = claim_space(nodes);
       h1 = claim_element(nodes, "H1", {});
@@ -135,9 +139,9 @@ function create_fragment(ctx) {
     },
     h: function hydrate() {
       document.title = "Blog";
-      add_location(h1, file, 24, 0, 698);
-      attr_dev(ul, "class", "svelte-7c25b2");
-      add_location(ul, file, 26, 0, 721);
+      add_location(h1, file, 18, 0, 302);
+      attr_dev(ul, "class", "svelte-13psmeo");
+      add_location(ul, file, 20, 0, 325);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
