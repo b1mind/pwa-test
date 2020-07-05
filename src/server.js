@@ -5,6 +5,7 @@ import * as sapper from '@sapper/server'
 
 const { PORT, NODE_ENV } = process.env
 const dev = NODE_ENV === 'development'
+
 const url = '/'
 // const url = 'pwa-test'
 console.log(dev, url)

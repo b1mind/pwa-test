@@ -4,7 +4,7 @@
 
 <header>
   <h1>
-    <img src="/images/svelte.png" alt="logo" />
+    <img src="images/svelte.png" alt="logo" />
   </h1>
 
 </header>

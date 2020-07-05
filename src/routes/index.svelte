@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from 'svelte'
+  import Trigger from '../components/shared/Trigger.svelte'
   import EmailBtn from '../Components/shared/EmailBtn.svelte'
   let val = 420
   let someString = 'Light one up, Pug style'
@@ -13,6 +15,7 @@
 
   <div class="card">
     <figure>
+
       <EmailBtn email="max@none.com" btnText="Email Max" />
       <img alt="Success Kid" src="images/successkid.jpg" />
       <figcaption>Have fun with Sapper!</figcaption>
@@ -23,7 +26,7 @@
       +if ('val === 420')
         p.test {someString}
         +else
-          p.test blah blah missed out
+        p.test blah blah missed out
     </template>
     <!---->
   </div>
@@ -39,9 +42,9 @@
           use Svelte
         </p>
       </figcaption>
+
     </figure>
   </div>
-  <div class="card" />
 </div>
 
 <style type="text/scss">

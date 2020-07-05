@@ -5,11 +5,12 @@
   import { faArrowsAlt, faArrowDown, faFeather, faBacon, faFish } from '@fortawesome/free-solid-svg-icons'
   import { gsap } from 'gsap'
   import { ScrollTrigger } from 'gsap/ScrollTrigger'
-  import { animate, triggerMe } from '../gsap.js'
-  gsap.registerPlugin(ScrollTrigger)
+  import { animate, triggerMe, pinScrub, newTrigger, killTriggers } from '../gsap.js'
 
+  let data = { 'data-test': 'this' }
   let desc = false
   let msg = 'click me'
+
   function testClick(e) {
     let test = e.target
     console.log(test)
@@ -18,24 +19,11 @@
     msg = 'GSAP 🐢 test success!'
   }
 
-  const trigger = () => {
-    let st = ScrollTrigger.create({
-      trigger: '.pinned',
-      pin: true,
-      animation: gsap.from('.pinned p', { duration: 1, opacity: 0, y: -100, stagger: 0.3 }),
-      start: 'center center',
-      toggleActions: 'play none none reverse',
-      //markers: true,
-    })
-    return st
-  }
-
   onMount(() => {
-    trigger()
-  })
-
-  onDestroy(() => {
-    trigger().disable()
+    return () => {
+      console.log(`killing triggers`)
+      killTriggers()
+    }
   })
 </script>
 
@@ -64,15 +52,28 @@ Test
 More
 <Icon icon={faBacon} />
 Really
-<div class="spacer">test</div>
+<div class="spacer" {...data}>test</div>
 <div id="anchor" class="trigger" use:triggerMe={{ duration: 1, opacity: 0, x: 100 }}>
   <p>testPin</p>
 </div>
+<div class="spacer" use:newTrigger={{ start: 'top bottom', toggleActions: 'play none none reverse' }}>test</div>
+<div class="pinned" use:pinScrub={{ autoAlpha: 0, y: '-=100', stagger: 0.3 }}>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+</div>
+
 <div class="spacer">test</div>
-<div class="pinned">
-  <p>testPin</p>
-  <p>testPin</p>
-  <p>testPin</p>
+<div class="pinned" use:pinScrub={{ autoAlpha: 0, x: '+=100', stagger: 0.3 }}>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
+</div>
+<div class="spacer">test</div>
+<div class="pinned" use:pinScrub={{ autoAlpha: 0, x: '-=100', stagger: 0.3 }}>
+  <p>test</p>
+  <p>test</p>
+  <p>test</p>
 </div>
 <div class="spacer">test</div>
 
@@ -82,5 +83,8 @@ Really
   }
   .pinned {
     background: grey;
+    p {
+      margin: 0;
+    }
   }
 </style>
