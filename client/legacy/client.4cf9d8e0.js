@@ -3058,27 +3058,27 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/blog\.json$/, /^\/blog\/([^\/]+?)\.json$/, /^\/test\/?$/];
 var components = [{
   js: function js() {
-    return import('./index.1ab882d1.js');
+    return import('./index.5858f363.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./projects.f6bca2f7.js');
+    return import('./projects.6b605781.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./about.35f987f8.js');
+    return import('./about.42a0abd6.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.ac706635.js');
+    return import('./index.2093610d.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./[slug].adecc3b5.js');
+    return import('./[slug].bd7a2135.js');
   },
   css: []
 }];
@@ -3934,4 +3934,4 @@ start({
   target: document.querySelector('#sapper')
 });
 
-export { createEventDispatcher as $, query_selector_all as A, claim_space as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, _typeof as H, create_slot as I, action_destroyer as J, update_slot as K, is_function as L, assign as M, exclude_internal_props as N, svg_element as O, null_to_empty as P, onDestroy as Q, beforeUpdate as R, SvelteComponentDev as S, afterUpdate as T, globals as U, set_attributes as V, toggle_class as W, get_spread_update as X, run_all as Y, validate_each_argument as Z, _inherits as _, _getPrototypeOf as a, destroy_each as a0, _asyncToGenerator as a1, regenerator as a2, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, _createClass as f, element as g, claim_element as h, init as i, children as j, claim_text as k, detach_dev as l, attr_dev as m, add_location as n, insert_dev as o, append_dev as p, listen_dev as q, _slicedToArray as r, safe_not_equal as s, text as t, set_data_dev as u, validate_slots as v, noop as w, onMount as x, space as y, create_component as z };
+export { validate_each_argument as $, query_selector_all as A, claim_space as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, create_slot as H, beforeUpdate as I, globals as J, update_slot as K, binding_callbacks as L, _typeof as M, assign as N, exclude_internal_props as O, svg_element as P, null_to_empty as Q, onDestroy as R, SvelteComponentDev as S, afterUpdate as T, set_attributes as U, toggle_class as V, action_destroyer as W, is_function as X, get_spread_update as Y, run_all as Z, _inherits as _, _getPrototypeOf as a, createEventDispatcher as a0, destroy_each as a1, _asyncToGenerator as a2, regenerator as a3, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, _createClass as f, element as g, claim_element as h, init as i, children as j, claim_text as k, detach_dev as l, attr_dev as m, add_location as n, insert_dev as o, append_dev as p, listen_dev as q, _slicedToArray as r, safe_not_equal as s, text as t, set_data_dev as u, validate_slots as v, noop as w, onMount as x, space as y, create_component as z };
