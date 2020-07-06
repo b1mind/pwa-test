@@ -12,6 +12,7 @@
 <style type="text/scss">
   img {
     width: 200px;
+    min-height: 200px;
   }
   h1 {
     text-align: center;

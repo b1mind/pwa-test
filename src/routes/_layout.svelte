@@ -3,7 +3,7 @@
   export let segment
 </script>
 
-<Nav segment={segment} />
+<Nav {segment} />
 
 <main>
   <slot />
@@ -11,7 +11,7 @@
 
 <style>
   main {
-    position: relative;
+    /* position: relative; */
     max-width: 56em;
     background-color: white;
     padding: 2em;

@@ -7,6 +7,7 @@
   import { ScrollTrigger } from 'gsap/ScrollTrigger'
   import { animate, triggerMe, pinScrub, newTrigger, killTriggers } from '../gsap.js'
 
+  import Trigger from '../components/shared/Trigger.svelte'
   let data = { 'data-test': 'this' }
   let desc = false
   let msg = 'click me'
@@ -62,7 +63,6 @@ Really
   <p>test</p>
   <p>test</p>
 </div>
-
 <div class="spacer">test</div>
 <div class="pinned" use:pinScrub={{ autoAlpha: 0, x: '+=100', stagger: 0.3 }}>
   <p>test</p>
@@ -79,7 +79,7 @@ Really
 
 <style type="text/scss">
   .spacer {
-    min-height: 100vh;
+    min-height: 1000px;
   }
   .pinned {
     background: grey;
