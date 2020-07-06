@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, H as create_slot, x as onMount, I as ScrollTrigger, J as gsapWithCSS, v as validate_slots, K as beforeUpdate, L as globals, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, r as _slicedToArray, M as update_slot, E as transition_in, F as transition_out, N as binding_callbacks } from './client.1d6e5f95.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, f as _createClass, S as SvelteComponentDev, H as create_slot, x as onMount, I as ScrollTrigger, v as validate_slots, J as afterUpdate, K as gsapWithCSS, L as globals, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, r as _slicedToArray, M as update_slot, E as transition_in, F as transition_out, N as binding_callbacks } from './client.9a226a03.js';
 import { _ as _defineProperty } from './defineProperty.b786bad4.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
@@ -16,10 +16,10 @@ function create_fragment(ctx) {
   var current;
   var default_slot_template =
   /*$$slots*/
-  ctx[3].default;
+  ctx[5].default;
   var default_slot = create_slot(default_slot_template, ctx,
   /*$$scope*/
-  ctx[2], null);
+  ctx[4], null);
   var block = {
     c: function create() {
       div = element("div");
@@ -41,7 +41,7 @@ function create_fragment(ctx) {
       attr_dev(div, "animation",
       /*animation*/
       ctx[0]);
-      add_location(div, file, 25, 0, 631);
+      add_location(div, file, 35, 0, 790);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -52,7 +52,7 @@ function create_fragment(ctx) {
       /*div_binding*/
 
 
-      ctx[4](div);
+      ctx[6](div);
       current = true;
     },
     p: function update(ctx, _ref) {
@@ -62,10 +62,10 @@ function create_fragment(ctx) {
       if (default_slot) {
         if (default_slot.p && dirty &
         /*$$scope*/
-        4) {
+        16) {
           update_slot(default_slot, default_slot_template, ctx,
           /*$$scope*/
-          ctx[2], dirty, null, null);
+          ctx[4], dirty, null, null);
         }
       }
 
@@ -91,7 +91,7 @@ function create_fragment(ctx) {
       if (default_slot) default_slot.d(detaching);
       /*div_binding*/
 
-      ctx[4](null);
+      ctx[6](null);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
@@ -112,16 +112,22 @@ function instance($$self, $$props, $$invalidate) {
     stagger: 0.3
   } : _$$props$animation;
   var target;
-  onMount(function () {
-    var st = ScrollTrigger.create({
+  var st;
+
+  function MakeTrigger() {
+    st = ScrollTrigger.create({
       trigger: target,
       pin: true,
+      //pinSpacing: 'margin',
       scrub: true,
       animation: gsapWithCSS.from(target.children, _objectSpread({}, animation)),
       start: "center center",
       toggleActions: "play none none reverse"
     }); //markers: true,
+  }
 
+  onMount(function () {
+    MakeTrigger();
     return function () {
       console.log(ScrollTrigger.getAll());
       st.kill();
@@ -144,30 +150,33 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$set = function ($$props) {
     if ("animation" in $$props) $$invalidate(0, animation = $$props.animation);
-    if ("$$scope" in $$props) $$invalidate(2, $$scope = $$props.$$scope);
+    if ("$$scope" in $$props) $$invalidate(4, $$scope = $$props.$$scope);
   };
 
   $$self.$capture_state = function () {
     return {
-      beforeUpdate: beforeUpdate,
+      afterUpdate: afterUpdate,
       onMount: onMount,
       gsap: gsapWithCSS,
       ScrollTrigger: ScrollTrigger,
       animation: animation,
-      target: target
+      target: target,
+      st: st,
+      MakeTrigger: MakeTrigger
     };
   };
 
   $$self.$inject_state = function ($$props) {
     if ("animation" in $$props) $$invalidate(0, animation = $$props.animation);
     if ("target" in $$props) $$invalidate(1, target = $$props.target);
+    if ("st" in $$props) st = $$props.st;
   };
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [animation, target, $$scope, $$slots, div_binding];
+  return [animation, target, st, MakeTrigger, $$scope, $$slots, div_binding];
 }
 
 var Trigger = /*#__PURE__*/function (_SvelteComponentDev) {

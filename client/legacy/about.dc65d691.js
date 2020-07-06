@@ -1,6 +1,6 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, w as noop, y as space, t as text, B as claim_space, k as claim_text, f as _createClass, a0 as validate_each_argument, a1 as createEventDispatcher, W as toggle_class, q as listen_dev, u as set_data_dev, r as _slicedToArray, a2 as destroy_each, z as create_component, A as query_selector_all, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component } from './client.1d6e5f95.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, v as validate_slots, g as element, h as claim_element, j as children, l as detach_dev, m as attr_dev, n as add_location, o as insert_dev, p as append_dev, w as noop, y as space, t as text, B as claim_space, k as claim_text, f as _createClass, a0 as validate_each_argument, a1 as createEventDispatcher, W as toggle_class, q as listen_dev, u as set_data_dev, r as _slicedToArray, a2 as destroy_each, z as create_component, A as query_selector_all, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component } from './client.9a226a03.js';
 import './defineProperty.b786bad4.js';
-import { T as Trigger } from './Trigger.c997b488.js';
+import { T as Trigger } from './Trigger.233745f0.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -539,7 +539,7 @@ var Tabs = /*#__PURE__*/function (_SvelteComponentDev) {
 function _createSuper$3(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$3(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$3() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-var file$3 = "src\\routes\\about.svelte"; // (28:2) {:else}
+var file$3 = "src\\routes\\about.svelte"; // (30:2) {:else}
 
 function create_else_block(ctx) {
   var p;
@@ -558,7 +558,7 @@ function create_else_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$3, 28, 4, 734);
+      add_location(p, file$3, 30, 4, 786);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -572,11 +572,11 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(28:2) {:else}",
+    source: "(30:2) {:else}",
     ctx: ctx
   });
   return block;
-} // (25:35) 
+} // (27:35) 
 
 
 function create_if_block_1(ctx) {
@@ -609,9 +609,9 @@ function create_if_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$3, 25, 4, 670);
+      add_location(p, file$3, 27, 4, 722);
       attr_dev(a, "href", "projects#anchor");
-      add_location(a, file$3, 26, 4, 685);
+      add_location(a, file$3, 28, 4, 737);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -630,11 +630,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(25:35) ",
+    source: "(27:35) ",
     ctx: ctx
   });
   return block;
-} // (23:2) {#if activeItem === 'Bio'}
+} // (25:2) {#if activeItem === 'Bio'}
 
 
 function create_if_block(ctx) {
@@ -654,7 +654,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$3, 23, 4, 574);
+      add_location(p, file$3, 25, 4, 626);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -668,11 +668,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(23:2) {#if activeItem === 'Bio'}",
+    source: "(25:2) {#if activeItem === 'Bio'}",
     ctx: ctx
   });
   return block;
-} // (32:0) <Trigger>
+} // (34:0) <Trigger>
 
 
 function create_default_slot_1(ctx) {
@@ -714,9 +714,9 @@ function create_default_slot_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p0, file$3, 32, 2, 786);
-      add_location(p1, file$3, 33, 2, 800);
-      add_location(p2, file$3, 34, 2, 814);
+      add_location(p0, file$3, 34, 2, 838);
+      add_location(p1, file$3, 35, 2, 852);
+      add_location(p2, file$3, 36, 2, 866);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p0, anchor);
@@ -740,11 +740,11 @@ function create_default_slot_1(ctx) {
     block: block,
     id: create_default_slot_1.name,
     type: "slot",
-    source: "(32:0) <Trigger>",
+    source: "(34:0) <Trigger>",
     ctx: ctx
   });
   return block;
-} // (38:0) <Trigger>
+} // (40:0) <Trigger {animation}>
 
 
 function create_default_slot(ctx) {
@@ -786,9 +786,9 @@ function create_default_slot(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p0, file$3, 38, 2, 880);
-      add_location(p1, file$3, 39, 2, 894);
-      add_location(p2, file$3, 40, 2, 908);
+      add_location(p0, file$3, 40, 2, 944);
+      add_location(p1, file$3, 41, 2, 958);
+      add_location(p2, file$3, 42, 2, 972);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p0, anchor);
@@ -812,7 +812,7 @@ function create_default_slot(ctx) {
     block: block,
     id: create_default_slot.name,
     type: "slot",
-    source: "(38:0) <Trigger>",
+    source: "(40:0) <Trigger {animation}>",
     ctx: ctx
   });
   return block;
@@ -820,25 +820,21 @@ function create_default_slot(ctx) {
 
 function create_fragment$3(ctx) {
   var t0;
-  var t1;
   var h1;
+  var t1;
   var t2;
-  var t3;
   var div0;
+  var t3;
   var t4;
   var t5;
-  var t6;
   var div1;
+  var t6;
   var t7;
   var t8;
-  var t9;
   var div2;
+  var t9;
   var t10;
-  var t11;
   var current;
-  var header = new Header({
-    $$inline: true
-  });
   var tabs = new Tabs({
     props: {
       activeItem:
@@ -879,6 +875,9 @@ function create_fragment$3(ctx) {
   });
   var trigger1 = new Trigger({
     props: {
+      animation:
+      /*animation*/
+      ctx[3],
       $$slots: {
         default: [create_default_slot]
       },
@@ -894,26 +893,24 @@ function create_fragment$3(ctx) {
   var block = {
     c: function create() {
       t0 = space();
-      create_component(header.$$.fragment);
-      t1 = space();
       h1 = element("h1");
-      t2 = text("About Svelte");
-      t3 = space();
+      t1 = text("About Svelte");
+      t2 = space();
       div0 = element("div");
       create_component(tabs.$$.fragment);
-      t4 = space();
+      t3 = space();
       if_block.c();
-      t5 = space();
+      t4 = space();
       create_component(trigger0.$$.fragment);
-      t6 = space();
+      t5 = space();
       div1 = element("div");
-      t7 = text("test");
-      t8 = space();
+      t6 = text("test");
+      t7 = space();
       create_component(trigger1.$$.fragment);
-      t9 = space();
+      t8 = space();
       div2 = element("div");
-      t10 = text("test");
-      t11 = space();
+      t9 = text("test");
+      t10 = space();
       create_component(footer.$$.fragment);
       this.h();
     },
@@ -921,75 +918,71 @@ function create_fragment$3(ctx) {
       var head_nodes = query_selector_all("[data-svelte=\"svelte-1myew8g\"]", document.head);
       head_nodes.forEach(detach_dev);
       t0 = claim_space(nodes);
-      claim_component(header.$$.fragment, nodes);
-      t1 = claim_space(nodes);
       h1 = claim_element(nodes, "H1", {});
       var h1_nodes = children(h1);
-      t2 = claim_text(h1_nodes, "About Svelte");
+      t1 = claim_text(h1_nodes, "About Svelte");
       h1_nodes.forEach(detach_dev);
-      t3 = claim_space(nodes);
+      t2 = claim_space(nodes);
       div0 = claim_element(nodes, "DIV", {
         class: true
       });
       var div0_nodes = children(div0);
       claim_component(tabs.$$.fragment, div0_nodes);
-      t4 = claim_space(div0_nodes);
+      t3 = claim_space(div0_nodes);
       if_block.l(div0_nodes);
       div0_nodes.forEach(detach_dev);
-      t5 = claim_space(nodes);
+      t4 = claim_space(nodes);
       claim_component(trigger0.$$.fragment, nodes);
-      t6 = claim_space(nodes);
+      t5 = claim_space(nodes);
       div1 = claim_element(nodes, "DIV", {
         class: true
       });
       var div1_nodes = children(div1);
-      t7 = claim_text(div1_nodes, "test");
+      t6 = claim_text(div1_nodes, "test");
       div1_nodes.forEach(detach_dev);
-      t8 = claim_space(nodes);
+      t7 = claim_space(nodes);
       claim_component(trigger1.$$.fragment, nodes);
-      t9 = claim_space(nodes);
+      t8 = claim_space(nodes);
       div2 = claim_element(nodes, "DIV", {
         class: true
       });
       var div2_nodes = children(div2);
-      t10 = claim_text(div2_nodes, "test");
+      t9 = claim_text(div2_nodes, "test");
       div2_nodes.forEach(detach_dev);
-      t11 = claim_space(nodes);
+      t10 = claim_space(nodes);
       claim_component(footer.$$.fragment, nodes);
       this.h();
     },
     h: function hydrate() {
       document.title = "About";
-      add_location(h1, file$3, 18, 0, 440);
+      add_location(h1, file$3, 20, 0, 492);
       attr_dev(div0, "class", "spacer svelte-x4hzh2");
-      add_location(div0, file$3, 20, 0, 463);
+      add_location(div0, file$3, 22, 0, 515);
       attr_dev(div1, "class", "spacer svelte-x4hzh2");
-      add_location(div1, file$3, 36, 0, 837);
+      add_location(div1, file$3, 38, 0, 889);
       attr_dev(div2, "class", "spacer svelte-x4hzh2");
-      add_location(div2, file$3, 42, 0, 931);
+      add_location(div2, file$3, 44, 0, 995);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
-      mount_component(header, target, anchor);
-      insert_dev(target, t1, anchor);
       insert_dev(target, h1, anchor);
-      append_dev(h1, t2);
-      insert_dev(target, t3, anchor);
+      append_dev(h1, t1);
+      insert_dev(target, t2, anchor);
       insert_dev(target, div0, anchor);
       mount_component(tabs, div0, null);
-      append_dev(div0, t4);
+      append_dev(div0, t3);
       if_block.m(div0, null);
-      insert_dev(target, t5, anchor);
+      insert_dev(target, t4, anchor);
       mount_component(trigger0, target, anchor);
-      insert_dev(target, t6, anchor);
+      insert_dev(target, t5, anchor);
       insert_dev(target, div1, anchor);
-      append_dev(div1, t7);
-      insert_dev(target, t8, anchor);
+      append_dev(div1, t6);
+      insert_dev(target, t7, anchor);
       mount_component(trigger1, target, anchor);
-      insert_dev(target, t9, anchor);
+      insert_dev(target, t8, anchor);
       insert_dev(target, div2, anchor);
-      append_dev(div2, t10);
-      insert_dev(target, t11, anchor);
+      append_dev(div2, t9);
+      insert_dev(target, t10, anchor);
       mount_component(footer, target, anchor);
       current = true;
     },
@@ -1019,7 +1012,7 @@ function create_fragment$3(ctx) {
 
       if (dirty &
       /*$$scope*/
-      8) {
+      16) {
         trigger0_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -1031,7 +1024,7 @@ function create_fragment$3(ctx) {
 
       if (dirty &
       /*$$scope*/
-      8) {
+      16) {
         trigger1_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -1042,7 +1035,6 @@ function create_fragment$3(ctx) {
     },
     i: function intro(local) {
       if (current) return;
-      transition_in(header.$$.fragment, local);
       transition_in(tabs.$$.fragment, local);
       transition_in(trigger0.$$.fragment, local);
       transition_in(trigger1.$$.fragment, local);
@@ -1050,7 +1042,6 @@ function create_fragment$3(ctx) {
       current = true;
     },
     o: function outro(local) {
-      transition_out(header.$$.fragment, local);
       transition_out(tabs.$$.fragment, local);
       transition_out(trigger0.$$.fragment, local);
       transition_out(trigger1.$$.fragment, local);
@@ -1059,22 +1050,20 @@ function create_fragment$3(ctx) {
     },
     d: function destroy(detaching) {
       if (detaching) detach_dev(t0);
-      destroy_component(header, detaching);
-      if (detaching) detach_dev(t1);
       if (detaching) detach_dev(h1);
-      if (detaching) detach_dev(t3);
+      if (detaching) detach_dev(t2);
       if (detaching) detach_dev(div0);
       destroy_component(tabs);
       if_block.d();
-      if (detaching) detach_dev(t5);
+      if (detaching) detach_dev(t4);
       destroy_component(trigger0, detaching);
-      if (detaching) detach_dev(t6);
+      if (detaching) detach_dev(t5);
       if (detaching) detach_dev(div1);
-      if (detaching) detach_dev(t8);
+      if (detaching) detach_dev(t7);
       destroy_component(trigger1, detaching);
-      if (detaching) detach_dev(t9);
+      if (detaching) detach_dev(t8);
       if (detaching) detach_dev(div2);
-      if (detaching) detach_dev(t11);
+      if (detaching) detach_dev(t10);
       destroy_component(footer, detaching);
     }
   };
@@ -1096,6 +1085,11 @@ function instance$3($$self, $$props, $$invalidate) {
     $$invalidate(0, activeItem = e.detail);
   };
 
+  var animation = {
+    autoAlpha: 0,
+    x: "-=100",
+    stagger: 0.3
+  };
   var writable_props = [];
   Object.keys($$props).forEach(function (key) {
     if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<About> was created with unknown prop '".concat(key, "'"));
@@ -1113,20 +1107,22 @@ function instance$3($$self, $$props, $$invalidate) {
       Trigger: Trigger,
       items: items,
       activeItem: activeItem,
-      tabChange: tabChange
+      tabChange: tabChange,
+      animation: animation
     };
   };
 
   $$self.$inject_state = function ($$props) {
     if ("items" in $$props) $$invalidate(1, items = $$props.items);
     if ("activeItem" in $$props) $$invalidate(0, activeItem = $$props.activeItem);
+    if ("animation" in $$props) $$invalidate(3, animation = $$props.animation);
   };
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [activeItem, items, tabChange];
+  return [activeItem, items, tabChange, animation];
 }
 
 var About = /*#__PURE__*/function (_SvelteComponentDev) {

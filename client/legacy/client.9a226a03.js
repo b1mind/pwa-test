@@ -3058,27 +3058,27 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/blog\.json$/, /^\/blog\/([^\/]+?)\.json$/, /^\/test\/?$/];
 var components = [{
   js: function js() {
-    return import('./index.bc70a6d4.js');
+    return import('./index.705a3833.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./projects.13f8ab0d.js');
+    return import('./projects.c0974eee.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./about.ba953595.js');
+    return import('./about.dc65d691.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./index.48eb61fc.js');
+    return import('./index.3c4d56d5.js');
   },
   css: []
 }, {
   js: function js() {
-    return import('./[slug].2707fc32.js');
+    return import('./[slug].b190817a.js');
   },
   css: []
 }];
@@ -10462,4 +10462,4 @@ start({
   target: document.querySelector('#sapper')
 }).then(function () {});
 
-export { run_all as $, query_selector_all as A, claim_space as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, create_slot as H, ScrollTrigger as I, gsapWithCSS as J, beforeUpdate as K, globals as L, update_slot as M, binding_callbacks as N, assign as O, exclude_internal_props as P, svg_element as Q, null_to_empty as R, SvelteComponentDev as S, onDestroy as T, afterUpdate as U, set_attributes as V, toggle_class as W, action_destroyer as X, is_function as Y, get_spread_update as Z, _inherits as _, _getPrototypeOf as a, validate_each_argument as a0, createEventDispatcher as a1, destroy_each as a2, _asyncToGenerator as a3, regenerator as a4, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, _createClass as f, element as g, claim_element as h, init as i, children as j, claim_text as k, detach_dev as l, attr_dev as m, add_location as n, insert_dev as o, append_dev as p, listen_dev as q, _slicedToArray as r, safe_not_equal as s, text as t, set_data_dev as u, validate_slots as v, noop as w, onMount as x, space as y, create_component as z };
+export { run_all as $, query_selector_all as A, claim_space as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, create_slot as H, ScrollTrigger as I, afterUpdate as J, gsapWithCSS as K, globals as L, update_slot as M, binding_callbacks as N, assign as O, exclude_internal_props as P, svg_element as Q, null_to_empty as R, SvelteComponentDev as S, onDestroy as T, beforeUpdate as U, set_attributes as V, toggle_class as W, action_destroyer as X, is_function as Y, get_spread_update as Z, _inherits as _, _getPrototypeOf as a, validate_each_argument as a0, createEventDispatcher as a1, destroy_each as a2, _asyncToGenerator as a3, regenerator as a4, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, _createClass as f, element as g, claim_element as h, init as i, children as j, claim_text as k, detach_dev as l, attr_dev as m, add_location as n, insert_dev as o, append_dev as p, listen_dev as q, _slicedToArray as r, safe_not_equal as s, text as t, set_data_dev as u, validate_slots as v, noop as w, onMount as x, space as y, create_component as z };
