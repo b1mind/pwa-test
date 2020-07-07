@@ -29,7 +29,6 @@
 
   onMount(() => {
     MakeTrigger()
-
     return () => {
       console.log(ScrollTrigger.getAll())
       st.kill()
