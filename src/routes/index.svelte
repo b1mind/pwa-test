@@ -1,97 +1,244 @@
 <script>
-  import { onMount } from 'svelte'
-  import Trigger from '../components/shared/Trigger.svelte'
-  import EmailBtn from '../Components/shared/EmailBtn.svelte'
-  let val = 420
-  let someString = 'Light one up, Pug style'
-</script>
+  //todo tab animation can be glitched clicking to fast 🏃‍♀️💨 probably do to the live var, maybe move logic back to markup?
+  //imports
+  import { afterUpdate, onMount } from 'svelte'
+  import { fly } from 'svelte/transition'
+  import { flip } from 'svelte/animate'
+  import { writable, readable, derived } from 'svelte-persistent-store/dist/local'
+  //components
+  import Tabs from '../components/shared/Tabs.svelte'
 
-<svelte:head>
-  <title>Sapper project template</title>
-</svelte:head>
+  let tid = 1
+  const storedList = writable('list', [
+    { id: tid++, done: false, text: 'make it faster 🏃‍♀️' },
+    { id: tid++, done: false, text: 'make it clever 🦊' },
+    { id: tid++, done: false, text: 'make it svelte 🧈' },
+  ])
 
-<h1>Great success!</h1>
-<div class="grid">
+  let todos = JSON.parse(localStorage.list)
+  let newTodo = ''
+  let sorts = ['All', 'Todo', 'Done']
+  let activeSort = 'All'
 
-  <div class="card">
-    <figure>
-
-      <EmailBtn email="max@none.com" btnText="Email Max" />
-      <img alt="Success Kid" src="images/successkid.jpg" />
-      <figcaption>Have fun with Sapper!</figcaption>
-
-    </figure>
-    <!-- prettier-ignore -->
-    <template lang="pug">
-      +if ('val === 420')
-        p.test {someString}
-        +else
-        p.test blah blah missed out
-    </template>
-    <!---->
-  </div>
-
-  <div class="card">
-    <figure>
-      <EmailBtn email="none@none.com" />
-      <img alt="Success Kid" src="images/successkid.jpg" />
-      <figcaption>
-        <p>
-          You too can be a
-          <strong>cool kid</strong>
-          use Svelte
-        </p>
-      </figcaption>
-
-    </figure>
-  </div>
-</div>
-
-<style type="text/scss">
-  $color: blue;
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
+  function addItem(e) {
+    if (!newTodo) return
+    let todo = { id: tid++, done: false, text: newTodo }
+    todos = [todo, ...todos]
+    storedList.set(todos)
+    newTodo = ''
   }
 
-  p {
-    font-size: large;
-    strong {
-      color: $color;
-    }
+  function deleteItem(todo) {
+    todos = todos.filter((t) => t !== todo)
+    storedList.set(todos)
+  }
+
+  function clearCompleted() {
+    todos = todos.filter((t) => !t.done)
+  }
+
+  $: leftTodo = todos.filter((t) => !t.done)
+  $: doneTodo = todos.filter((t) => t.done)
+  $: sortTodos = todos
+
+  //tabs and sorts
+  const tabChange = (e) => {
+    activeSort = e.detail
+  }
+
+  afterUpdate(() => {
+    activeSort === 'Todo' ? (sortTodos = leftTodo) : activeSort === 'Done' ? (sortTodos = doneTodo) : (sortTodos = todos)
+  })
+</script>
+
+<div class="wrap">
+  <h1>todos</h1>
+  <form on:submit|preventDefault={addItem}>
+    <div class="inputWrap">
+      <input class="input" name="inputTask" placeholder=" " bind:value={newTodo} />
+      <label class="label" name="inputTask">What needs to be done?</label>
+      <button disabled={!newTodo}>➕</button>
+    </div>
+  </form>
+  {#if todos.length === 0}
+    <p>Please add a task</p>
+  {:else if leftTodo.length === 0}
+    <p>Tasks complete</p>
+  {:else if leftTodo.length === 1}
+    <p>{leftTodo.length} task left</p>
+  {:else}
+    <p>{leftTodo.length} tasks left</p>
+  {/if}
+
+  <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
+    {#each sortTodos as todo (todo.id)}
+      <div class="task" animate:flip={{ duration: 350 }} transition:fly={{ x: 50, duration: 350 }}>
+        <label class="container">
+          <span id="todoText" class:done={todo.done}>{todo.text}</span>
+          <input type="checkbox" bind:checked={todo.done} />
+          <span class="checkmark" />
+        </label>
+        <span class="delete" on:click={() => deleteItem(todo)}>X</span>
+      </div>
+    {/each}
+  </Tabs>
+</div>
+
+<style lang="scss">
+  :global()body {
+    overflow-y: scroll;
+  }
+
+  .wrap {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
+    word-wrap: break-word;
+  }
+
+  .inputWrap {
+    //width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.25rem;
+    color: grey;
+    pointer-events: none;
+    transition: 200ms;
+  }
+
+  .input {
+    min-width: 245px;
+    padding-top: 0.85rem;
+    font-size: 1rem;
+    border: transparent;
+    border-bottom: 2px solid darkgrey;
+    outline: transparent;
+  }
+
+  .input:hover {
+    border-bottom: 2px solid #2196f3;
+  }
+
+  .input:focus {
+    border-bottom: 2px solid black;
+  }
+
+  .input:focus + label,
+  .input:not(:placeholder-shown) + label {
+    top: -1rem;
+    left: 0;
+    color: #2196f3;
+  }
+
+  .wrap button {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    border: 2px solid darkgrey;
+  }
+
+  .wrap button:hover {
+    border: 2px solid #2196f3;
+  }
+
+  .task {
+    position: relative;
+    text-align: left;
   }
 
   h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
+    font-size: 3rem;
   }
 
-  figure {
-    margin: 0 0 1em 0;
+  .done {
+    opacity: 0.4;
+    text-decoration: line-through;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  .delete {
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    color: grey;
+    font-weight: bolder;
+    cursor: pointer;
   }
 
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
+  .delete:hover,
+  .delete:active {
+    color: red;
   }
 
-  p {
-    margin: 1em auto;
+  /* stole some the checkbox style from w3 schools for now*/
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    border-bottom: 1px dotted lightgrey;
   }
 
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
+  /*hide normal input*/
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+    cursor: pointer;
+  }
+
+  .container input:hover ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 </style>

@@ -1,19 +1,24 @@
 <script>
+  // brought over from my site cause why not components right?!?
   import { createEventDispatcher } from 'svelte'
+
   let dispatch = createEventDispatcher()
 
-  export let items
-  export let activeItem
+  export let sorts
+  export let activeSort
 </script>
 
 <div class="tabs">
   <ul>
-    {#each items as item}
-      <li on:click={() => dispatch('tabChange', item)}>
-        <div class:active={item === activeItem}>{item}</div>
+    {#each sorts as sort}
+      <li on:click={() => dispatch('tabChange', sort)}>
+        <div class:active={sort === activeSort}>{sort}</div>
       </li>
     {/each}
   </ul>
+  <div>
+    <slot />
+  </div>
 </div>
 
 <style type="text/scss">
@@ -30,14 +35,14 @@
 
   li {
     margin: 0 1em;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: grey;
     cursor: pointer;
   }
 
   .active {
     padding-bottom: 0.5em;
-    color: purple;
-    border-bottom: 2px solid purple;
+    color: #2196f3;
+    border-bottom: 2px solid #2196f3;
   }
 </style>
