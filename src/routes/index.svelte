@@ -1,20 +1,24 @@
 <script>
   //todo tab animation can be glitched clicking to fast 🏃‍♀️💨 probably do to the live var, maybe move logic back to markup?
   //imports
-  import { afterUpdate, onMount } from 'svelte'
+  import { afterUpdate, beforeUpdate, onMount } from 'svelte'
   import { fly } from 'svelte/transition'
   import { flip } from 'svelte/animate'
   import { writable, readable, derived } from 'svelte-persistent-store/dist/local'
   //components
   import Tabs from '../components/shared/Tabs.svelte'
 
-  const storedList = writable('list', [
+  let storedList = writable('list', [
     { id: 2, done: false, text: 'make it faster 🏃‍♀️' },
     { id: 1, done: false, text: 'make it clever 🦊' },
     { id: 0, done: false, text: 'make it svelte 🧈' },
   ])
+
   let todos = JSON.parse(localStorage.list)
-  let tid = 1
+
+  let storedId = writable('tid', 3)
+  let tid = JSON.parse(localStorage.tid) + 1
+
   let newTodo = ''
   let sorts = ['All', 'Todo', 'Done']
   let activeSort = 'All'
@@ -22,14 +26,17 @@
   function addItem(e) {
     if (!newTodo) return
     let todo = { id: tid++, done: false, text: newTodo }
+    todos = [todo, ...todos]
+    storedList.set(todos)
+    storedId.set(todo.id)
+    newTodo = ''
+    /* //Todo refactor to loop and reassign key[id]: value 
     todos.forEach((id) => {
       if (todo.id === id.id) {
         todo.id = tid + 100
+        tid++
       }
-    })
-    todos = [todo, ...todos]
-    storedList.set(todos)
-    newTodo = ''
+    }) */
   }
 
   function deleteItem(todo) {
@@ -98,12 +105,10 @@
     max-width: 300px;
     margin: 0 auto;
     text-align: center;
-
     word-wrap: break-word;
   }
 
   .inputWrap {
-    //width: max-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,8 +149,8 @@
   }
 
   .wrap button {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     margin: 0;
     font-size: 0.75rem;
     border-radius: 50%;
