@@ -15,12 +15,15 @@
     { id: 1, done: false, text: 'make it clever 🦊' },
     { id: 0, done: false, text: 'make it svelte 🧈' },
   ])
-
-  let todos = JSON.parse(localStorage.list)
-  let tid = JSON.parse(localStorage.tid) + 1
+  let todos = []
+  let tid = 1
+  onMount((params) => {
+    todos = JSON.parse(localStorage.list)
+    tid = JSON.parse(localStorage.tid) + 1
+  })
 
   let newTodo = ''
-  let sorts = ['All', 'Todo', 'Done']
+  let sorts = ['Todo', 'Done', 'All']
   let activeSort = 'All'
 
   function addItem(e) {
@@ -62,6 +65,11 @@
     storedList.set(todos)
   })
 </script>
+
+<svelte:head>
+  <meta name="description" content="Author: Brent b1Mind Morton, Todo Web App: This is a test Todo PWA with svelte/sapper " />
+  <title>Svelte Todo</title>
+</svelte:head>
 
 <div class="wrap">
   <h1>todos</h1>
