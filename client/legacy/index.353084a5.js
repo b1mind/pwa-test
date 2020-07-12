@@ -1,4 +1,4 @@
-import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as onMount, N as validate_each_keys, O as create_component, P as claim_component, Q as set_input_value, R as mount_component, T as prevent_default, U as prop_dev, V as destroy_component, W as _toConsumableArray, X as fix_position, Y as add_transform, Z as create_animation, $ as add_render_callback, a0 as create_bidirectional_transition, a1 as empty, a2 as group_outros, a3 as update_keyed_each, a4 as check_outros, a5 as fix_and_outro_and_destroy_block } from './client.544d67c5.js';
+import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as onMount, N as validate_each_keys, O as create_component, P as claim_component, Q as set_input_value, R as mount_component, T as prevent_default, U as prop_dev, V as destroy_component, W as _toConsumableArray, X as fix_position, Y as add_transform, Z as create_animation, $ as add_render_callback, a0 as create_bidirectional_transition, a1 as empty, a2 as group_outros, a3 as update_keyed_each, a4 as check_outros, a5 as fix_and_outro_and_destroy_block } from './client.29f81caf.js';
 
 function cubicOut(t) {
   var f = t - 1.0;
@@ -590,7 +590,7 @@ function get_each_context$1(ctx, list, i) {
   child_ctx[17] = list;
   child_ctx[18] = i;
   return child_ctx;
-} // (69:2) {:else}
+} // (74:2) {:else}
 
 
 function create_else_block(ctx) {
@@ -616,7 +616,7 @@ function create_else_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 69, 4, 2051);
+      add_location(p, file$1, 74, 4, 2166);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -638,11 +638,11 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(69:2) {:else}",
+    source: "(74:2) {:else}",
     ctx: ctx
   });
   return block;
-} // (67:34) 
+} // (72:34) 
 
 
 function create_if_block_2(ctx) {
@@ -668,7 +668,7 @@ function create_if_block_2(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 67, 4, 2002);
+      add_location(p, file$1, 72, 4, 2117);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -690,11 +690,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(67:34) ",
+    source: "(72:34) ",
     ctx: ctx
   });
   return block;
-} // (65:34) 
+} // (70:34) 
 
 
 function create_if_block_1(ctx) {
@@ -714,7 +714,7 @@ function create_if_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 65, 4, 1941);
+      add_location(p, file$1, 70, 4, 2056);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -729,11 +729,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(65:34) ",
+    source: "(70:34) ",
     ctx: ctx
   });
   return block;
-} // (63:2) {#if todos.length === 0}
+} // (68:2) {#if todos.length === 0}
 
 
 function create_if_block(ctx) {
@@ -753,7 +753,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 63, 4, 1877);
+      add_location(p, file$1, 68, 4, 1992);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -768,11 +768,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(63:2) {#if todos.length === 0}",
+    source: "(68:2) {#if todos.length === 0}",
     ctx: ctx
   });
   return block;
-} // (74:4) {#each sortTodos as todo (todo.id)}
+} // (79:4) {#each sortTodos as todo (todo.id)}
 
 
 function create_each_block$1(key_1, ctx) {
@@ -785,6 +785,7 @@ function create_each_block$1(key_1, ctx) {
   var t0;
   var t1;
   var input;
+  var input_id_value;
   var t2;
   var span1;
   var t3;
@@ -848,7 +849,6 @@ function create_each_block$1(key_1, ctx) {
       });
       var label_nodes = children(label);
       span0 = claim_element(label_nodes, "SPAN", {
-        id: true,
         class: true
       });
       var span0_nodes = children(span0);
@@ -856,7 +856,9 @@ function create_each_block$1(key_1, ctx) {
       span0_nodes.forEach(detach_dev);
       t1 = claim_space(label_nodes);
       input = claim_element(label_nodes, "INPUT", {
+        id: true,
         type: true,
+        name: true,
         class: true
       });
       t2 = claim_space(label_nodes);
@@ -877,23 +879,26 @@ function create_each_block$1(key_1, ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(span0, "id", "todoText");
-      attr_dev(span0, "class", "svelte-17g9t0q");
+      attr_dev(span0, "class", "todoText svelte-15crno2");
       toggle_class(span0, "done",
       /*todo*/
       ctx[16].done);
-      add_location(span0, file$1, 76, 10, 2335);
+      add_location(span0, file$1, 81, 10, 2450);
+      attr_dev(input, "id", input_id_value = "todo-" +
+      /*todo*/
+      ctx[16].id);
       attr_dev(input, "type", "checkbox");
-      attr_dev(input, "class", "svelte-17g9t0q");
-      add_location(input, file$1, 77, 10, 2407);
-      attr_dev(span1, "class", "checkmark svelte-17g9t0q");
-      add_location(span1, file$1, 78, 10, 2468);
-      attr_dev(label, "class", "container svelte-17g9t0q");
-      add_location(label, file$1, 75, 8, 2299);
-      attr_dev(span2, "class", "delete svelte-17g9t0q");
-      add_location(span2, file$1, 80, 8, 2520);
-      attr_dev(div, "class", "task svelte-17g9t0q");
-      add_location(div, file$1, 74, 6, 2197);
+      attr_dev(input, "name", "todo check");
+      attr_dev(input, "class", "svelte-15crno2");
+      add_location(input, file$1, 82, 10, 2525);
+      attr_dev(span1, "class", "checkmark svelte-15crno2");
+      add_location(span1, file$1, 83, 10, 2624);
+      attr_dev(label, "class", "container svelte-15crno2");
+      add_location(label, file$1, 80, 8, 2414);
+      attr_dev(span2, "class", "delete svelte-15crno2");
+      add_location(span2, file$1, 85, 8, 2676);
+      attr_dev(div, "class", "task svelte-15crno2");
+      add_location(div, file$1, 79, 6, 2312);
       this.first = div;
     },
     m: function mount(target, anchor) {
@@ -933,6 +938,14 @@ function create_each_block$1(key_1, ctx) {
         toggle_class(span0, "done",
         /*todo*/
         ctx[16].done);
+      }
+
+      if (!current || dirty &
+      /*sortTodos*/
+      16 && input_id_value !== (input_id_value = "todo-" +
+      /*todo*/
+      ctx[16].id)) {
+        attr_dev(input, "id", input_id_value);
       }
 
       if (dirty &
@@ -987,11 +1000,11 @@ function create_each_block$1(key_1, ctx) {
     block: block,
     id: create_each_block$1.name,
     type: "each",
-    source: "(74:4) {#each sortTodos as todo (todo.id)}",
+    source: "(79:4) {#each sortTodos as todo (todo.id)}",
     ctx: ctx
   });
   return block;
-} // (73:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
+} // (78:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
 
 
 function create_default_slot(ctx) {
@@ -1094,7 +1107,7 @@ function create_default_slot(ctx) {
     block: block,
     id: create_default_slot.name,
     type: "slot",
-    source: "(73:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>",
+    source: "(78:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>",
     ctx: ctx
   });
   return block;
@@ -1196,14 +1209,15 @@ function create_fragment$1(ctx) {
       });
       var div0_nodes = children(div0);
       input = claim_element(div0_nodes, "INPUT", {
-        class: true,
+        id: true,
         name: true,
-        placeholder: true
+        placeholder: true,
+        class: true
       });
       t2 = claim_space(div0_nodes);
       label = claim_element(div0_nodes, "LABEL", {
         class: true,
-        name: true
+        for: true
       });
       var label_nodes = children(label);
       t3 = claim_text(label_nodes, "What needs to be done?");
@@ -1226,25 +1240,26 @@ function create_fragment$1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(h1, "class", "svelte-17g9t0q");
-      add_location(h1, file$1, 54, 2, 1534);
-      attr_dev(input, "class", "input svelte-17g9t0q");
+      attr_dev(h1, "class", "svelte-15crno2");
+      add_location(h1, file$1, 59, 2, 1649);
+      attr_dev(input, "id", "inputTask");
       attr_dev(input, "name", "inputTask");
       attr_dev(input, "placeholder", " ");
-      add_location(input, file$1, 57, 6, 1627);
-      attr_dev(label, "class", "label svelte-17g9t0q");
-      attr_dev(label, "name", "inputTask");
-      add_location(label, file$1, 58, 6, 1711);
+      attr_dev(input, "class", "svelte-15crno2");
+      add_location(input, file$1, 62, 6, 1742);
+      attr_dev(label, "class", "label svelte-15crno2");
+      attr_dev(label, "for", "inputTask");
+      add_location(label, file$1, 63, 6, 1827);
       button.disabled = button_disabled_value = !
       /*newTodo*/
       ctx[1];
-      attr_dev(button, "class", "svelte-17g9t0q");
-      add_location(button, file$1, 59, 6, 1786);
-      attr_dev(div0, "class", "inputWrap svelte-17g9t0q");
-      add_location(div0, file$1, 56, 4, 1597);
-      add_location(form, file$1, 55, 2, 1551);
-      attr_dev(div1, "class", "wrap svelte-17g9t0q");
-      add_location(div1, file$1, 53, 0, 1513);
+      attr_dev(button, "class", "svelte-15crno2");
+      add_location(button, file$1, 64, 6, 1901);
+      attr_dev(div0, "class", "inputWrap svelte-15crno2");
+      add_location(div0, file$1, 61, 4, 1712);
+      add_location(form, file$1, 60, 2, 1666);
+      attr_dev(div1, "class", "wrap svelte-15crno2");
+      add_location(div1, file$1, 58, 0, 1628);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div1, anchor);
@@ -1358,21 +1373,21 @@ function create_fragment$1(ctx) {
 }
 
 function instance$1($$self, $$props, $$invalidate) {
-  var tid = 1;
   var storedList = writable("list", [{
-    id: tid++,
+    id: 2,
     done: false,
     text: "make it faster 🏃‍♀️"
   }, {
-    id: tid++,
+    id: 1,
     done: false,
     text: "make it clever 🦊"
   }, {
-    id: tid++,
+    id: 0,
     done: false,
     text: "make it svelte 🧈"
   }]);
   var todos = JSON.parse(localStorage.list);
+  var tid = 1;
   var newTodo = "";
   var sorts = ["All", "Todo", "Done"];
   var activeSort = "All";
@@ -1384,6 +1399,11 @@ function instance$1($$self, $$props, $$invalidate) {
       done: false,
       text: newTodo
     };
+    todos.forEach(function (id) {
+      if (todo.id === id.id) {
+        todo.id = tid + 100;
+      }
+    });
     $$invalidate(0, todos = [todo].concat(_toConsumableArray(todos)));
     storedList.set(todos);
     $$invalidate(1, newTodo = "");
@@ -1409,6 +1429,7 @@ function instance$1($$self, $$props, $$invalidate) {
 
   afterUpdate(function () {
     activeSort === "Todo" ? $$invalidate(4, sortTodos = leftTodo) : activeSort === "Done" ? $$invalidate(4, sortTodos = doneTodo) : $$invalidate(4, sortTodos = todos);
+    storedList.set(todos);
   });
   var writable_props = [];
   Object.keys($$props).forEach(function (key) {
@@ -1443,9 +1464,9 @@ function instance$1($$self, $$props, $$invalidate) {
       readable: readable,
       derived: derived,
       Tabs: Tabs,
-      tid: tid,
       storedList: storedList,
       todos: todos,
+      tid: tid,
       newTodo: newTodo,
       sorts: sorts,
       activeSort: activeSort,
@@ -1460,8 +1481,8 @@ function instance$1($$self, $$props, $$invalidate) {
   };
 
   $$self.$inject_state = function ($$props) {
-    if ("tid" in $$props) tid = $$props.tid;
     if ("todos" in $$props) $$invalidate(0, todos = $$props.todos);
+    if ("tid" in $$props) tid = $$props.tid;
     if ("newTodo" in $$props) $$invalidate(1, newTodo = $$props.newTodo);
     if ("sorts" in $$props) $$invalidate(5, sorts = $$props.sorts);
     if ("activeSort" in $$props) $$invalidate(2, activeSort = $$props.activeSort);

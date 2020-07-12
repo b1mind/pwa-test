@@ -3394,7 +3394,7 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/test\/?$/];
 var components = [{
   js: function js() {
-    return import('./index.74af3381.js');
+    return import('./index.353084a5.js');
   },
   css: []
 }];
