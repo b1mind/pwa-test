@@ -8,14 +8,13 @@
   //components
   import Tabs from '../components/shared/Tabs.svelte'
 
-  let tid = 1
   const storedList = writable('list', [
-    { id: tid++, done: false, text: 'make it faster 🏃‍♀️' },
-    { id: tid++, done: false, text: 'make it clever 🦊' },
-    { id: tid++, done: false, text: 'make it svelte 🧈' },
+    { id: 2, done: false, text: 'make it faster 🏃‍♀️' },
+    { id: 1, done: false, text: 'make it clever 🦊' },
+    { id: 0, done: false, text: 'make it svelte 🧈' },
   ])
-
   let todos = JSON.parse(localStorage.list)
+  let tid = 1
   let newTodo = ''
   let sorts = ['All', 'Todo', 'Done']
   let activeSort = 'All'
@@ -23,6 +22,11 @@
   function addItem(e) {
     if (!newTodo) return
     let todo = { id: tid++, done: false, text: newTodo }
+    todos.forEach((id) => {
+      if (todo.id === id.id) {
+        todo.id = tid + 100
+      }
+    })
     todos = [todo, ...todos]
     storedList.set(todos)
     newTodo = ''
@@ -48,6 +52,7 @@
 
   afterUpdate(() => {
     activeSort === 'Todo' ? (sortTodos = leftTodo) : activeSort === 'Done' ? (sortTodos = doneTodo) : (sortTodos = todos)
+    storedList.set(todos)
   })
 </script>
 
@@ -55,8 +60,8 @@
   <h1>todos</h1>
   <form on:submit|preventDefault={addItem}>
     <div class="inputWrap">
-      <input class="input" name="inputTask" placeholder=" " bind:value={newTodo} />
-      <label class="label" name="inputTask">What needs to be done?</label>
+      <input id="inputTask" name="inputTask" placeholder=" " bind:value={newTodo} />
+      <label class="label" for="inputTask">What needs to be done?</label>
       <button disabled={!newTodo}>➕</button>
     </div>
   </form>
@@ -74,8 +79,8 @@
     {#each sortTodos as todo (todo.id)}
       <div class="task" animate:flip={{ duration: 350 }} transition:fly={{ x: 50, duration: 350 }}>
         <label class="container">
-          <span id="todoText" class:done={todo.done}>{todo.text}</span>
-          <input type="checkbox" bind:checked={todo.done} />
+          <span class="todoText" class:done={todo.done}>{todo.text}</span>
+          <input id="todo-{todo.id}" type="checkbox" name="todo check" bind:checked={todo.done} />
           <span class="checkmark" />
         </label>
         <span class="delete" on:click={() => deleteItem(todo)}>X</span>
@@ -114,7 +119,7 @@
     transition: 200ms;
   }
 
-  .input {
+  #inputTask {
     min-width: 245px;
     padding-top: 0.85rem;
     font-size: 1rem;
@@ -123,16 +128,16 @@
     outline: transparent;
   }
 
-  .input:hover {
+  #inputTask:hover {
     border-bottom: 2px solid #2196f3;
   }
 
-  .input:focus {
+  #inputTask:focus {
     border-bottom: 2px solid black;
   }
 
-  .input:focus + label,
-  .input:not(:placeholder-shown) + label {
+  #inputTask:focus + label,
+  #inputTask:not(:placeholder-shown) + label {
     top: -1rem;
     left: 0;
     color: #2196f3;
