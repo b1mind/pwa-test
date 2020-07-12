@@ -1,4 +1,4 @@
-import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as beforeUpdate, N as onMount, O as validate_each_keys, P as create_component, Q as claim_component, R as set_input_value, T as mount_component, U as prevent_default, V as prop_dev, W as destroy_component, X as _toConsumableArray, Y as fix_position, Z as add_transform, $ as create_animation, a0 as add_render_callback, a1 as create_bidirectional_transition, a2 as empty, a3 as group_outros, a4 as update_keyed_each, a5 as check_outros, a6 as fix_and_outro_and_destroy_block } from './client.a45cfecc.js';
+import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as beforeUpdate, N as onMount, O as validate_each_keys, P as create_component, Q as query_selector_all, R as claim_component, T as set_input_value, U as mount_component, V as prevent_default, W as prop_dev, X as destroy_component, Y as _toConsumableArray, Z as fix_position, $ as add_transform, a0 as create_animation, a1 as add_render_callback, a2 as create_bidirectional_transition, a3 as empty, a4 as group_outros, a5 as update_keyed_each, a6 as check_outros, a7 as fix_and_outro_and_destroy_block } from './client.e919e880.js';
 
 function cubicOut(t) {
   var f = t - 1.0;
@@ -590,7 +590,7 @@ function get_each_context$1(ctx, list, i) {
   child_ctx[18] = list;
   child_ctx[19] = i;
   return child_ctx;
-} // (81:2) {:else}
+} // (86:2) {:else}
 
 
 function create_else_block(ctx) {
@@ -616,7 +616,7 @@ function create_else_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 81, 4, 2433);
+      add_location(p, file$1, 86, 4, 2601);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -638,11 +638,11 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(81:2) {:else}",
+    source: "(86:2) {:else}",
     ctx: ctx
   });
   return block;
-} // (79:34) 
+} // (84:34) 
 
 
 function create_if_block_2(ctx) {
@@ -668,7 +668,7 @@ function create_if_block_2(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 79, 4, 2384);
+      add_location(p, file$1, 84, 4, 2552);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -690,11 +690,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(79:34) ",
+    source: "(84:34) ",
     ctx: ctx
   });
   return block;
-} // (77:34) 
+} // (82:34) 
 
 
 function create_if_block_1(ctx) {
@@ -714,7 +714,7 @@ function create_if_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 77, 4, 2323);
+      add_location(p, file$1, 82, 4, 2491);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -729,11 +729,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(77:34) ",
+    source: "(82:34) ",
     ctx: ctx
   });
   return block;
-} // (75:2) {#if todos.length === 0}
+} // (80:2) {#if todos.length === 0}
 
 
 function create_if_block(ctx) {
@@ -753,7 +753,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 75, 4, 2259);
+      add_location(p, file$1, 80, 4, 2427);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -768,11 +768,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(75:2) {#if todos.length === 0}",
+    source: "(80:2) {#if todos.length === 0}",
     ctx: ctx
   });
   return block;
-} // (86:4) {#each sortTodos as todo (todo.id)}
+} // (91:4) {#each sortTodos as todo (todo.id)}
 
 
 function create_each_block$1(key_1, ctx) {
@@ -883,22 +883,22 @@ function create_each_block$1(key_1, ctx) {
       toggle_class(span0, "done",
       /*todo*/
       ctx[17].done);
-      add_location(span0, file$1, 88, 10, 2717);
+      add_location(span0, file$1, 93, 10, 2885);
       attr_dev(input, "id", input_id_value = "todo-" +
       /*todo*/
       ctx[17].id);
       attr_dev(input, "type", "checkbox");
       attr_dev(input, "name", "todo check");
       attr_dev(input, "class", "svelte-1a0a1hq");
-      add_location(input, file$1, 89, 10, 2792);
+      add_location(input, file$1, 94, 10, 2960);
       attr_dev(span1, "class", "checkmark svelte-1a0a1hq");
-      add_location(span1, file$1, 90, 10, 2891);
+      add_location(span1, file$1, 95, 10, 3059);
       attr_dev(label, "class", "container svelte-1a0a1hq");
-      add_location(label, file$1, 87, 8, 2681);
+      add_location(label, file$1, 92, 8, 2849);
       attr_dev(span2, "class", "delete svelte-1a0a1hq");
-      add_location(span2, file$1, 92, 8, 2943);
+      add_location(span2, file$1, 97, 8, 3111);
       attr_dev(div, "class", "task svelte-1a0a1hq");
-      add_location(div, file$1, 86, 6, 2579);
+      add_location(div, file$1, 91, 6, 2747);
       this.first = div;
     },
     m: function mount(target, anchor) {
@@ -1000,11 +1000,11 @@ function create_each_block$1(key_1, ctx) {
     block: block,
     id: create_each_block$1.name,
     type: "each",
-    source: "(86:4) {#each sortTodos as todo (todo.id)}",
+    source: "(91:4) {#each sortTodos as todo (todo.id)}",
     ctx: ctx
   });
   return block;
-} // (85:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
+} // (90:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
 
 
 function create_default_slot(ctx) {
@@ -1107,29 +1107,31 @@ function create_default_slot(ctx) {
     block: block,
     id: create_default_slot.name,
     type: "slot",
-    source: "(85:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>",
+    source: "(90:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>",
     ctx: ctx
   });
   return block;
 }
 
 function create_fragment$1(ctx) {
+  var meta;
+  var t0;
   var div1;
   var h1;
-  var t0;
   var t1;
+  var t2;
   var form;
   var div0;
   var input;
-  var t2;
-  var label;
   var t3;
+  var label;
   var t4;
-  var button;
   var t5;
-  var button_disabled_value;
+  var button;
   var t6;
+  var button_disabled_value;
   var t7;
+  var t8;
   var current;
   var mounted;
   var dispose;
@@ -1171,26 +1173,35 @@ function create_fragment$1(ctx) {
   ctx[8]);
   var block = {
     c: function create() {
+      meta = element("meta");
+      t0 = space();
       div1 = element("div");
       h1 = element("h1");
-      t0 = text("todos");
-      t1 = space();
+      t1 = text("todos");
+      t2 = space();
       form = element("form");
       div0 = element("div");
       input = element("input");
-      t2 = space();
+      t3 = space();
       label = element("label");
-      t3 = text("What needs to be done?");
-      t4 = space();
+      t4 = text("What needs to be done?");
+      t5 = space();
       button = element("button");
-      t5 = text("➕");
-      t6 = space();
-      if_block.c();
+      t6 = text("➕");
       t7 = space();
+      if_block.c();
+      t8 = space();
       create_component(tabs.$$.fragment);
       this.h();
     },
     l: function claim(nodes) {
+      var head_nodes = query_selector_all("[data-svelte=\"svelte-1sb2v1i\"]", document.head);
+      meta = claim_element(head_nodes, "META", {
+        name: true,
+        content: true
+      });
+      head_nodes.forEach(detach_dev);
+      t0 = claim_space(nodes);
       div1 = claim_element(nodes, "DIV", {
         class: true
       });
@@ -1199,9 +1210,9 @@ function create_fragment$1(ctx) {
         class: true
       });
       var h1_nodes = children(h1);
-      t0 = claim_text(h1_nodes, "todos");
+      t1 = claim_text(h1_nodes, "todos");
       h1_nodes.forEach(detach_dev);
-      t1 = claim_space(div1_nodes);
+      t2 = claim_space(div1_nodes);
       form = claim_element(div1_nodes, "FORM", {});
       var form_nodes = children(form);
       div0 = claim_element(form_nodes, "DIV", {
@@ -1214,73 +1225,79 @@ function create_fragment$1(ctx) {
         placeholder: true,
         class: true
       });
-      t2 = claim_space(div0_nodes);
+      t3 = claim_space(div0_nodes);
       label = claim_element(div0_nodes, "LABEL", {
         class: true,
         for: true
       });
       var label_nodes = children(label);
-      t3 = claim_text(label_nodes, "What needs to be done?");
+      t4 = claim_text(label_nodes, "What needs to be done?");
       label_nodes.forEach(detach_dev);
-      t4 = claim_space(div0_nodes);
+      t5 = claim_space(div0_nodes);
       button = claim_element(div0_nodes, "BUTTON", {
         disabled: true,
         class: true
       });
       var button_nodes = children(button);
-      t5 = claim_text(button_nodes, "➕");
+      t6 = claim_text(button_nodes, "➕");
       button_nodes.forEach(detach_dev);
       div0_nodes.forEach(detach_dev);
       form_nodes.forEach(detach_dev);
-      t6 = claim_space(div1_nodes);
-      if_block.l(div1_nodes);
       t7 = claim_space(div1_nodes);
+      if_block.l(div1_nodes);
+      t8 = claim_space(div1_nodes);
       claim_component(tabs.$$.fragment, div1_nodes);
       div1_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
+      attr_dev(meta, "name", "Svelte Todo PWA");
+      attr_dev(meta, "content", "Brent b1Mind Morton, This is a test Todo PWA with svelte/sapper ");
+      add_location(meta, file$1, 66, 2, 1911);
+      document.title = "Svelte Todo";
       attr_dev(h1, "class", "svelte-1a0a1hq");
-      add_location(h1, file$1, 66, 2, 1916);
+      add_location(h1, file$1, 71, 2, 2084);
       attr_dev(input, "id", "inputTask");
       attr_dev(input, "name", "inputTask");
       attr_dev(input, "placeholder", " ");
       attr_dev(input, "class", "svelte-1a0a1hq");
-      add_location(input, file$1, 69, 6, 2009);
+      add_location(input, file$1, 74, 6, 2177);
       attr_dev(label, "class", "label svelte-1a0a1hq");
       attr_dev(label, "for", "inputTask");
-      add_location(label, file$1, 70, 6, 2094);
+      add_location(label, file$1, 75, 6, 2262);
       button.disabled = button_disabled_value = !
       /*newTodo*/
       ctx[1];
       attr_dev(button, "class", "svelte-1a0a1hq");
-      add_location(button, file$1, 71, 6, 2168);
+      add_location(button, file$1, 76, 6, 2336);
       attr_dev(div0, "class", "inputWrap svelte-1a0a1hq");
-      add_location(div0, file$1, 68, 4, 1979);
-      add_location(form, file$1, 67, 2, 1933);
+      add_location(div0, file$1, 73, 4, 2147);
+      add_location(form, file$1, 72, 2, 2101);
       attr_dev(div1, "class", "wrap svelte-1a0a1hq");
-      add_location(div1, file$1, 65, 0, 1895);
+      add_location(div1, file$1, 70, 0, 2063);
     },
     m: function mount(target, anchor) {
+      append_dev(document.head, meta);
+      insert_dev(target, t0, anchor);
       insert_dev(target, div1, anchor);
       append_dev(div1, h1);
-      append_dev(h1, t0);
-      append_dev(div1, t1);
+      append_dev(h1, t1);
+      append_dev(div1, t2);
       append_dev(div1, form);
       append_dev(form, div0);
       append_dev(div0, input);
       set_input_value(input,
       /*newTodo*/
       ctx[1]);
-      append_dev(div0, t2);
+      append_dev(div0, t3);
       append_dev(div0, label);
-      append_dev(label, t3);
-      append_dev(div0, t4);
+      append_dev(label, t4);
+      append_dev(div0, t5);
       append_dev(div0, button);
-      append_dev(button, t5);
-      append_dev(div1, t6);
-      if_block.m(div1, null);
+      append_dev(button, t6);
       append_dev(div1, t7);
+      if_block.m(div1, null);
+      append_dev(div1, t8);
       mount_component(tabs, div1, null);
       current = true;
 
@@ -1323,7 +1340,7 @@ function create_fragment$1(ctx) {
 
         if (if_block) {
           if_block.c();
-          if_block.m(div1, t7);
+          if_block.m(div1, t8);
         }
       }
 
@@ -1355,6 +1372,8 @@ function create_fragment$1(ctx) {
       current = false;
     },
     d: function destroy(detaching) {
+      detach_dev(meta);
+      if (detaching) detach_dev(t0);
       if (detaching) detach_dev(div1);
       if_block.d();
       destroy_component(tabs);
