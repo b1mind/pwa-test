@@ -1,4 +1,4 @@
-import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as beforeUpdate, N as onMount, O as validate_each_keys, P as create_component, Q as claim_component, R as set_input_value, T as mount_component, U as prevent_default, V as prop_dev, W as destroy_component, X as _toConsumableArray, Y as fix_position, Z as add_transform, $ as create_animation, a0 as add_render_callback, a1 as create_bidirectional_transition, a2 as empty, a3 as group_outros, a4 as update_keyed_each, a5 as check_outros, a6 as fix_and_outro_and_destroy_block } from './client.83346543.js';
+import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as beforeUpdate, N as onMount, O as validate_each_keys, P as create_component, Q as claim_component, R as set_input_value, T as mount_component, U as prevent_default, V as prop_dev, W as destroy_component, X as _toConsumableArray, Y as fix_position, Z as add_transform, $ as create_animation, a0 as add_render_callback, a1 as create_bidirectional_transition, a2 as empty, a3 as group_outros, a4 as update_keyed_each, a5 as check_outros, a6 as fix_and_outro_and_destroy_block } from './client.a45cfecc.js';
 
 function cubicOut(t) {
   var f = t - 1.0;
@@ -616,7 +616,7 @@ function create_else_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 81, 4, 2351);
+      add_location(p, file$1, 81, 4, 2433);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -668,7 +668,7 @@ function create_if_block_2(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 79, 4, 2302);
+      add_location(p, file$1, 79, 4, 2384);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -714,7 +714,7 @@ function create_if_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 77, 4, 2241);
+      add_location(p, file$1, 77, 4, 2323);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -753,7 +753,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 75, 4, 2177);
+      add_location(p, file$1, 75, 4, 2259);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -883,22 +883,22 @@ function create_each_block$1(key_1, ctx) {
       toggle_class(span0, "done",
       /*todo*/
       ctx[17].done);
-      add_location(span0, file$1, 88, 10, 2635);
+      add_location(span0, file$1, 88, 10, 2717);
       attr_dev(input, "id", input_id_value = "todo-" +
       /*todo*/
       ctx[17].id);
       attr_dev(input, "type", "checkbox");
       attr_dev(input, "name", "todo check");
       attr_dev(input, "class", "svelte-1a0a1hq");
-      add_location(input, file$1, 89, 10, 2710);
+      add_location(input, file$1, 89, 10, 2792);
       attr_dev(span1, "class", "checkmark svelte-1a0a1hq");
-      add_location(span1, file$1, 90, 10, 2809);
+      add_location(span1, file$1, 90, 10, 2891);
       attr_dev(label, "class", "container svelte-1a0a1hq");
-      add_location(label, file$1, 87, 8, 2599);
+      add_location(label, file$1, 87, 8, 2681);
       attr_dev(span2, "class", "delete svelte-1a0a1hq");
-      add_location(span2, file$1, 92, 8, 2861);
+      add_location(span2, file$1, 92, 8, 2943);
       attr_dev(div, "class", "task svelte-1a0a1hq");
-      add_location(div, file$1, 86, 6, 2497);
+      add_location(div, file$1, 86, 6, 2579);
       this.first = div;
     },
     m: function mount(target, anchor) {
@@ -1241,25 +1241,25 @@ function create_fragment$1(ctx) {
     },
     h: function hydrate() {
       attr_dev(h1, "class", "svelte-1a0a1hq");
-      add_location(h1, file$1, 66, 2, 1834);
+      add_location(h1, file$1, 66, 2, 1916);
       attr_dev(input, "id", "inputTask");
       attr_dev(input, "name", "inputTask");
       attr_dev(input, "placeholder", " ");
       attr_dev(input, "class", "svelte-1a0a1hq");
-      add_location(input, file$1, 69, 6, 1927);
+      add_location(input, file$1, 69, 6, 2009);
       attr_dev(label, "class", "label svelte-1a0a1hq");
       attr_dev(label, "for", "inputTask");
-      add_location(label, file$1, 70, 6, 2012);
+      add_location(label, file$1, 70, 6, 2094);
       button.disabled = button_disabled_value = !
       /*newTodo*/
       ctx[1];
       attr_dev(button, "class", "svelte-1a0a1hq");
-      add_location(button, file$1, 71, 6, 2086);
+      add_location(button, file$1, 71, 6, 2168);
       attr_dev(div0, "class", "inputWrap svelte-1a0a1hq");
-      add_location(div0, file$1, 68, 4, 1897);
-      add_location(form, file$1, 67, 2, 1851);
+      add_location(div0, file$1, 68, 4, 1979);
+      add_location(form, file$1, 67, 2, 1933);
       attr_dev(div1, "class", "wrap svelte-1a0a1hq");
-      add_location(div1, file$1, 65, 0, 1813);
+      add_location(div1, file$1, 65, 0, 1895);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div1, anchor);
@@ -1373,6 +1373,7 @@ function create_fragment$1(ctx) {
 }
 
 function instance$1($$self, $$props, $$invalidate) {
+  var storedId = writable("tid", 3);
   var storedList = writable("list", [{
     id: 2,
     done: false,
@@ -1387,7 +1388,6 @@ function instance$1($$self, $$props, $$invalidate) {
     text: "make it svelte 🧈"
   }]);
   var todos = JSON.parse(localStorage.list);
-  var storedId = writable("tid", 3);
   var tid = JSON.parse(localStorage.tid) + 1;
   var newTodo = "";
   var sorts = ["All", "Todo", "Done"];
@@ -1470,9 +1470,9 @@ function instance$1($$self, $$props, $$invalidate) {
       readable: readable,
       derived: derived,
       Tabs: Tabs,
+      storedId: storedId,
       storedList: storedList,
       todos: todos,
-      storedId: storedId,
       tid: tid,
       newTodo: newTodo,
       sorts: sorts,
@@ -1488,9 +1488,9 @@ function instance$1($$self, $$props, $$invalidate) {
   };
 
   $$self.$inject_state = function ($$props) {
+    if ("storedId" in $$props) storedId = $$props.storedId;
     if ("storedList" in $$props) storedList = $$props.storedList;
     if ("todos" in $$props) $$invalidate(0, todos = $$props.todos);
-    if ("storedId" in $$props) storedId = $$props.storedId;
     if ("tid" in $$props) tid = $$props.tid;
     if ("newTodo" in $$props) $$invalidate(1, newTodo = $$props.newTodo);
     if ("sorts" in $$props) $$invalidate(5, sorts = $$props.sorts);
@@ -1532,7 +1532,7 @@ function instance$1($$self, $$props, $$invalidate) {
     }
   };
 
-  return [todos, newTodo, activeSort, leftTodo, sortTodos, sorts, addItem, deleteItem, tabChange, tid, doneTodo, storedList, storedId, clearCompleted, input_input_handler, input_change_handler, click_handler];
+  return [todos, newTodo, activeSort, leftTodo, sortTodos, sorts, addItem, deleteItem, tabChange, tid, doneTodo, storedId, storedList, clearCompleted, input_input_handler, input_change_handler, click_handler];
 }
 
 var Routes = /*#__PURE__*/function (_SvelteComponentDev) {
