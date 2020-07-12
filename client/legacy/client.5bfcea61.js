@@ -2225,66 +2225,34 @@ var file = "src\\components\\Nav.svelte";
 
 function create_fragment(ctx) {
   var nav;
-  var ul;
-  var li;
-  var a;
-  var t;
-  var a_aria_current_value;
+  var div;
+  var div_aria_current_value;
   var block = {
     c: function create() {
       nav = element("nav");
-      ul = element("ul");
-      li = element("li");
-      a = element("a");
-      t = text("home");
+      div = element("div");
       this.h();
     },
     l: function claim(nodes) {
-      nav = claim_element(nodes, "NAV", {
-        class: true
-      });
+      nav = claim_element(nodes, "NAV", {});
       var nav_nodes = children(nav);
-      ul = claim_element(nav_nodes, "UL", {
-        class: true
+      div = claim_element(nav_nodes, "DIV", {
+        "aria-current": true
       });
-      var ul_nodes = children(ul);
-      li = claim_element(ul_nodes, "LI", {
-        class: true
-      });
-      var li_nodes = children(li);
-      a = claim_element(li_nodes, "A", {
-        "aria-current": true,
-        href: true,
-        class: true
-      });
-      var a_nodes = children(a);
-      t = claim_text(a_nodes, "home");
-      a_nodes.forEach(detach_dev);
-      li_nodes.forEach(detach_dev);
-      ul_nodes.forEach(detach_dev);
+      children(div).forEach(detach_dev);
       nav_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
-      attr_dev(a, "aria-current", a_aria_current_value =
+      attr_dev(div, "aria-current", div_aria_current_value =
       /*segment*/
       ctx[0] === undefined ? "page" : undefined);
-      attr_dev(a, "href", ".");
-      attr_dev(a, "class", "svelte-amzbjn");
-      add_location(a, file, 7, 6, 92);
-      attr_dev(li, "class", "svelte-amzbjn");
-      add_location(li, file, 6, 4, 81);
-      attr_dev(ul, "class", "svelte-amzbjn");
-      add_location(ul, file, 5, 2, 72);
-      attr_dev(nav, "class", "svelte-amzbjn");
+      add_location(div, file, 5, 2, 72);
       add_location(nav, file, 4, 0, 64);
     },
     m: function mount(target, anchor) {
       insert_dev(target, nav, anchor);
-      append_dev(nav, ul);
-      append_dev(ul, li);
-      append_dev(li, a);
-      append_dev(a, t);
+      append_dev(nav, div);
     },
     p: function update(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
@@ -2292,10 +2260,10 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*segment*/
-      1 && a_aria_current_value !== (a_aria_current_value =
+      1 && div_aria_current_value !== (div_aria_current_value =
       /*segment*/
       ctx[0] === undefined ? "page" : undefined)) {
-        attr_dev(a, "aria-current", a_aria_current_value);
+        attr_dev(div, "aria-current", div_aria_current_value);
       }
     },
     i: noop,
@@ -3398,7 +3366,7 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/test\/?$/];
 var components = [{
   js: function js() {
-    return import('./index.72602aa9.js');
+    return import('./index.af65f484.js');
   },
   css: []
 }];
@@ -4223,4 +4191,4 @@ start({
   target: document.querySelector('#sapper')
 }).then(function () {});
 
-export { add_transform as $, toggle_class as A, add_location as B, insert_dev as C, append_dev as D, listen_dev as E, set_data_dev as F, _slicedToArray as G, update_slot as H, transition_in as I, transition_out as J, destroy_each as K, afterUpdate as L, beforeUpdate as M, onMount as N, validate_each_keys as O, create_component as P, query_selector_all as Q, claim_component as R, SvelteComponentDev as S, set_input_value as T, mount_component as U, prevent_default as V, prop_dev as W, destroy_component as X, _toConsumableArray as Y, fix_position as Z, _inherits as _, _getPrototypeOf as a, create_animation as a0, add_render_callback as a1, create_bidirectional_transition as a2, empty as a3, group_outros as a4, update_keyed_each as a5, check_outros as a6, fix_and_outro_and_destroy_block as a7, _possibleConstructorReturn as b, _classCallCheck as c, init as d, _assertThisInitialized as e, dispatch_dev as f, get_store_value as g, _createClass as h, is_function as i, create_slot as j, createEventDispatcher as k, validate_slots as l, element as m, noop as n, space as o, claim_element as p, children as q, run_all as r, safe_not_equal as s, text as t, claim_text as u, validate_each_argument as v, writable as w, detach_dev as x, claim_space as y, attr_dev as z };
+export { add_transform as $, toggle_class as A, add_location as B, insert_dev as C, append_dev as D, listen_dev as E, set_data_dev as F, _slicedToArray as G, update_slot as H, transition_in as I, transition_out as J, destroy_each as K, onMount as L, afterUpdate as M, beforeUpdate as N, validate_each_keys as O, create_component as P, query_selector_all as Q, claim_component as R, SvelteComponentDev as S, set_input_value as T, mount_component as U, prevent_default as V, prop_dev as W, destroy_component as X, _toConsumableArray as Y, fix_position as Z, _inherits as _, _getPrototypeOf as a, create_animation as a0, add_render_callback as a1, create_bidirectional_transition as a2, empty as a3, group_outros as a4, update_keyed_each as a5, check_outros as a6, fix_and_outro_and_destroy_block as a7, _possibleConstructorReturn as b, _classCallCheck as c, init as d, _assertThisInitialized as e, dispatch_dev as f, get_store_value as g, _createClass as h, is_function as i, create_slot as j, createEventDispatcher as k, validate_slots as l, element as m, noop as n, space as o, claim_element as p, children as q, run_all as r, safe_not_equal as s, text as t, claim_text as u, validate_each_argument as v, writable as w, detach_dev as x, claim_space as y, attr_dev as z };
