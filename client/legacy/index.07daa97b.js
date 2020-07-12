@@ -1,4 +1,4 @@
-import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as onMount, N as validate_each_keys, O as create_component, P as claim_component, Q as set_input_value, R as mount_component, T as prevent_default, U as prop_dev, V as destroy_component, W as _toConsumableArray, X as fix_position, Y as add_transform, Z as create_animation, $ as add_render_callback, a0 as create_bidirectional_transition, a1 as empty, a2 as group_outros, a3 as update_keyed_each, a4 as check_outros, a5 as fix_and_outro_and_destroy_block } from './client.29f81caf.js';
+import { i as is_function, g as get_store_value, w as writable$1, n as noop, r as run_all, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, d as init, s as safe_not_equal, e as _assertThisInitialized, f as dispatch_dev, h as _createClass, S as SvelteComponentDev, v as validate_each_argument, j as create_slot, k as createEventDispatcher, l as validate_slots, m as element, t as text, o as space, p as claim_element, q as children, u as claim_text, x as detach_dev, y as claim_space, z as attr_dev, A as toggle_class, B as add_location, C as insert_dev, D as append_dev, E as listen_dev, F as set_data_dev, G as _slicedToArray, H as update_slot, I as transition_in, J as transition_out, K as destroy_each, L as afterUpdate, M as beforeUpdate, N as onMount, O as validate_each_keys, P as create_component, Q as claim_component, R as set_input_value, T as mount_component, U as prevent_default, V as prop_dev, W as destroy_component, X as _toConsumableArray, Y as fix_position, Z as add_transform, $ as create_animation, a0 as add_render_callback, a1 as create_bidirectional_transition, a2 as empty, a3 as group_outros, a4 as update_keyed_each, a5 as check_outros, a6 as fix_and_outro_and_destroy_block } from './client.83346543.js';
 
 function cubicOut(t) {
   var f = t - 1.0;
@@ -586,11 +586,11 @@ var file$1 = "src\\routes\\index.svelte";
 
 function get_each_context$1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[16] = list[i];
-  child_ctx[17] = list;
-  child_ctx[18] = i;
+  child_ctx[17] = list[i];
+  child_ctx[18] = list;
+  child_ctx[19] = i;
   return child_ctx;
-} // (74:2) {:else}
+} // (81:2) {:else}
 
 
 function create_else_block(ctx) {
@@ -616,7 +616,7 @@ function create_else_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 74, 4, 2166);
+      add_location(p, file$1, 81, 4, 2351);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -638,11 +638,11 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(74:2) {:else}",
+    source: "(81:2) {:else}",
     ctx: ctx
   });
   return block;
-} // (72:34) 
+} // (79:34) 
 
 
 function create_if_block_2(ctx) {
@@ -668,7 +668,7 @@ function create_if_block_2(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 72, 4, 2117);
+      add_location(p, file$1, 79, 4, 2302);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -690,11 +690,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(72:34) ",
+    source: "(79:34) ",
     ctx: ctx
   });
   return block;
-} // (70:34) 
+} // (77:34) 
 
 
 function create_if_block_1(ctx) {
@@ -714,7 +714,7 @@ function create_if_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 70, 4, 2056);
+      add_location(p, file$1, 77, 4, 2241);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -729,11 +729,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(70:34) ",
+    source: "(77:34) ",
     ctx: ctx
   });
   return block;
-} // (68:2) {#if todos.length === 0}
+} // (75:2) {#if todos.length === 0}
 
 
 function create_if_block(ctx) {
@@ -753,7 +753,7 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(p, file$1, 68, 4, 1992);
+      add_location(p, file$1, 75, 4, 2177);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -768,11 +768,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(68:2) {#if todos.length === 0}",
+    source: "(75:2) {#if todos.length === 0}",
     ctx: ctx
   });
   return block;
-} // (79:4) {#each sortTodos as todo (todo.id)}
+} // (86:4) {#each sortTodos as todo (todo.id)}
 
 
 function create_each_block$1(key_1, ctx) {
@@ -781,7 +781,7 @@ function create_each_block$1(key_1, ctx) {
   var span0;
   var t0_value =
   /*todo*/
-  ctx[16].text + "";
+  ctx[17].text + "";
   var t0;
   var t1;
   var input;
@@ -801,9 +801,9 @@ function create_each_block$1(key_1, ctx) {
 
   function input_change_handler() {
     /*input_change_handler*/
-    ctx[14].call(input,
+    ctx[15].call(input,
     /*todo*/
-    ctx[16]);
+    ctx[17]);
   }
 
   function click_handler() {
@@ -815,9 +815,9 @@ function create_each_block$1(key_1, ctx) {
 
     return (
       /*click_handler*/
-      (_ctx = ctx)[15].apply(_ctx, [
+      (_ctx = ctx)[16].apply(_ctx, [
       /*todo*/
-      ctx[16]].concat(args))
+      ctx[17]].concat(args))
     );
   }
 
@@ -879,26 +879,26 @@ function create_each_block$1(key_1, ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(span0, "class", "todoText svelte-15crno2");
+      attr_dev(span0, "class", "todoText svelte-1a0a1hq");
       toggle_class(span0, "done",
       /*todo*/
-      ctx[16].done);
-      add_location(span0, file$1, 81, 10, 2450);
+      ctx[17].done);
+      add_location(span0, file$1, 88, 10, 2635);
       attr_dev(input, "id", input_id_value = "todo-" +
       /*todo*/
-      ctx[16].id);
+      ctx[17].id);
       attr_dev(input, "type", "checkbox");
       attr_dev(input, "name", "todo check");
-      attr_dev(input, "class", "svelte-15crno2");
-      add_location(input, file$1, 82, 10, 2525);
-      attr_dev(span1, "class", "checkmark svelte-15crno2");
-      add_location(span1, file$1, 83, 10, 2624);
-      attr_dev(label, "class", "container svelte-15crno2");
-      add_location(label, file$1, 80, 8, 2414);
-      attr_dev(span2, "class", "delete svelte-15crno2");
-      add_location(span2, file$1, 85, 8, 2676);
-      attr_dev(div, "class", "task svelte-15crno2");
-      add_location(div, file$1, 79, 6, 2312);
+      attr_dev(input, "class", "svelte-1a0a1hq");
+      add_location(input, file$1, 89, 10, 2710);
+      attr_dev(span1, "class", "checkmark svelte-1a0a1hq");
+      add_location(span1, file$1, 90, 10, 2809);
+      attr_dev(label, "class", "container svelte-1a0a1hq");
+      add_location(label, file$1, 87, 8, 2599);
+      attr_dev(span2, "class", "delete svelte-1a0a1hq");
+      add_location(span2, file$1, 92, 8, 2861);
+      attr_dev(div, "class", "task svelte-1a0a1hq");
+      add_location(div, file$1, 86, 6, 2497);
       this.first = div;
     },
     m: function mount(target, anchor) {
@@ -910,7 +910,7 @@ function create_each_block$1(key_1, ctx) {
       append_dev(label, input);
       input.checked =
       /*todo*/
-      ctx[16].done;
+      ctx[17].done;
       append_dev(label, t2);
       append_dev(label, span1);
       append_dev(div, t3);
@@ -930,21 +930,21 @@ function create_each_block$1(key_1, ctx) {
       /*sortTodos*/
       16) && t0_value !== (t0_value =
       /*todo*/
-      ctx[16].text + "")) set_data_dev(t0, t0_value);
+      ctx[17].text + "")) set_data_dev(t0, t0_value);
 
       if (dirty &
       /*sortTodos*/
       16) {
         toggle_class(span0, "done",
         /*todo*/
-        ctx[16].done);
+        ctx[17].done);
       }
 
       if (!current || dirty &
       /*sortTodos*/
       16 && input_id_value !== (input_id_value = "todo-" +
       /*todo*/
-      ctx[16].id)) {
+      ctx[17].id)) {
         attr_dev(input, "id", input_id_value);
       }
 
@@ -953,7 +953,7 @@ function create_each_block$1(key_1, ctx) {
       16) {
         input.checked =
         /*todo*/
-        ctx[16].done;
+        ctx[17].done;
       }
     },
     r: function measure() {
@@ -1000,11 +1000,11 @@ function create_each_block$1(key_1, ctx) {
     block: block,
     id: create_each_block$1.name,
     type: "each",
-    source: "(79:4) {#each sortTodos as todo (todo.id)}",
+    source: "(86:4) {#each sortTodos as todo (todo.id)}",
     ctx: ctx
   });
   return block;
-} // (78:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
+} // (85:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
 
 
 function create_default_slot(ctx) {
@@ -1020,7 +1020,7 @@ function create_default_slot(ctx) {
   var get_key = function get_key(ctx) {
     return (
       /*todo*/
-      ctx[16].id
+      ctx[17].id
     );
   };
 
@@ -1107,7 +1107,7 @@ function create_default_slot(ctx) {
     block: block,
     id: create_default_slot.name,
     type: "slot",
-    source: "(78:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>",
+    source: "(85:2) <Tabs {activeSort} {sorts} on:tabChange={tabChange}>",
     ctx: ctx
   });
   return block;
@@ -1240,26 +1240,26 @@ function create_fragment$1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(h1, "class", "svelte-15crno2");
-      add_location(h1, file$1, 59, 2, 1649);
+      attr_dev(h1, "class", "svelte-1a0a1hq");
+      add_location(h1, file$1, 66, 2, 1834);
       attr_dev(input, "id", "inputTask");
       attr_dev(input, "name", "inputTask");
       attr_dev(input, "placeholder", " ");
-      attr_dev(input, "class", "svelte-15crno2");
-      add_location(input, file$1, 62, 6, 1742);
-      attr_dev(label, "class", "label svelte-15crno2");
+      attr_dev(input, "class", "svelte-1a0a1hq");
+      add_location(input, file$1, 69, 6, 1927);
+      attr_dev(label, "class", "label svelte-1a0a1hq");
       attr_dev(label, "for", "inputTask");
-      add_location(label, file$1, 63, 6, 1827);
+      add_location(label, file$1, 70, 6, 2012);
       button.disabled = button_disabled_value = !
       /*newTodo*/
       ctx[1];
-      attr_dev(button, "class", "svelte-15crno2");
-      add_location(button, file$1, 64, 6, 1901);
-      attr_dev(div0, "class", "inputWrap svelte-15crno2");
-      add_location(div0, file$1, 61, 4, 1712);
-      add_location(form, file$1, 60, 2, 1666);
-      attr_dev(div1, "class", "wrap svelte-15crno2");
-      add_location(div1, file$1, 58, 0, 1628);
+      attr_dev(button, "class", "svelte-1a0a1hq");
+      add_location(button, file$1, 71, 6, 2086);
+      attr_dev(div0, "class", "inputWrap svelte-1a0a1hq");
+      add_location(div0, file$1, 68, 4, 1897);
+      add_location(form, file$1, 67, 2, 1851);
+      attr_dev(div1, "class", "wrap svelte-1a0a1hq");
+      add_location(div1, file$1, 65, 0, 1813);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div1, anchor);
@@ -1287,7 +1287,7 @@ function create_fragment$1(ctx) {
       if (!mounted) {
         dispose = [listen_dev(input, "input",
         /*input_input_handler*/
-        ctx[13]), listen_dev(form, "submit", prevent_default(
+        ctx[14]), listen_dev(form, "submit", prevent_default(
         /*addItem*/
         ctx[6]), false, true, false)];
         mounted = true;
@@ -1336,7 +1336,7 @@ function create_fragment$1(ctx) {
 
       if (dirty &
       /*$$scope, sortTodos*/
-      524304) {
+      1048592) {
         tabs_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -1387,7 +1387,8 @@ function instance$1($$self, $$props, $$invalidate) {
     text: "make it svelte 🧈"
   }]);
   var todos = JSON.parse(localStorage.list);
-  var tid = 1;
+  var storedId = writable("tid", 3);
+  var tid = JSON.parse(localStorage.tid) + 1;
   var newTodo = "";
   var sorts = ["All", "Todo", "Done"];
   var activeSort = "All";
@@ -1399,15 +1400,19 @@ function instance$1($$self, $$props, $$invalidate) {
       done: false,
       text: newTodo
     };
-    todos.forEach(function (id) {
-      if (todo.id === id.id) {
-        todo.id = tid + 100;
-      }
-    });
     $$invalidate(0, todos = [todo].concat(_toConsumableArray(todos)));
     storedList.set(todos);
+    storedId.set(todo.id);
     $$invalidate(1, newTodo = "");
   }
+  /* //Todo refactor to loop and reassign key[id]: value 
+  todos.forEach((id) => {
+  if (todo.id === id.id) {
+   todo.id = tid + 100
+   tid++
+  }
+  }) */
+
 
   function deleteItem(todo) {
     $$invalidate(0, todos = todos.filter(function (t) {
@@ -1457,6 +1462,7 @@ function instance$1($$self, $$props, $$invalidate) {
   $$self.$capture_state = function () {
     return {
       afterUpdate: afterUpdate,
+      beforeUpdate: beforeUpdate,
       onMount: onMount,
       fly: fly,
       flip: flip,
@@ -1466,6 +1472,7 @@ function instance$1($$self, $$props, $$invalidate) {
       Tabs: Tabs,
       storedList: storedList,
       todos: todos,
+      storedId: storedId,
       tid: tid,
       newTodo: newTodo,
       sorts: sorts,
@@ -1481,7 +1488,9 @@ function instance$1($$self, $$props, $$invalidate) {
   };
 
   $$self.$inject_state = function ($$props) {
+    if ("storedList" in $$props) storedList = $$props.storedList;
     if ("todos" in $$props) $$invalidate(0, todos = $$props.todos);
+    if ("storedId" in $$props) storedId = $$props.storedId;
     if ("tid" in $$props) tid = $$props.tid;
     if ("newTodo" in $$props) $$invalidate(1, newTodo = $$props.newTodo);
     if ("sorts" in $$props) $$invalidate(5, sorts = $$props.sorts);
@@ -1523,7 +1532,7 @@ function instance$1($$self, $$props, $$invalidate) {
     }
   };
 
-  return [todos, newTodo, activeSort, leftTodo, sortTodos, sorts, addItem, deleteItem, tabChange, tid, doneTodo, storedList, clearCompleted, input_input_handler, input_change_handler, click_handler];
+  return [todos, newTodo, activeSort, leftTodo, sortTodos, sorts, addItem, deleteItem, tabChange, tid, doneTodo, storedList, storedId, clearCompleted, input_input_handler, input_change_handler, click_handler];
 }
 
 var Routes = /*#__PURE__*/function (_SvelteComponentDev) {
