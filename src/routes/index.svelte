@@ -8,6 +8,8 @@
   //components
   import Tabs from '../components/shared/Tabs.svelte'
 
+  //Fixme 500 error because trying to access local storage in the wrong lifecycle.
+  let storedId = writable('tid', 3)
   let storedList = writable('list', [
     { id: 2, done: false, text: 'make it faster 🏃‍♀️' },
     { id: 1, done: false, text: 'make it clever 🦊' },
@@ -15,8 +17,6 @@
   ])
 
   let todos = JSON.parse(localStorage.list)
-
-  let storedId = writable('tid', 3)
   let tid = JSON.parse(localStorage.tid) + 1
 
   let newTodo = ''
