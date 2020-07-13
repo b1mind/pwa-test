@@ -4,12 +4,18 @@
 </script>
 
 <Nav {segment} />
-
+<div class="testScss">This is a test of Scss _layout</div>
 <main>
   <slot />
 </main>
 
-<style>
+<style global lang="scss">
+  @import '../../static/scss/global.scss';
+
+  body {
+    overflow-y: scroll;
+  }
+
   main {
     /* position: relative; */
     max-width: 56em;

@@ -1,4 +1,4 @@
-<script>
+<script lang="javascript">
   //todo tab animation can be glitched clicking to fast 🏃‍♀️💨 probably do to the live var, maybe move logic back to markup?
   //imports
   import { afterUpdate, beforeUpdate, onMount } from 'svelte'
@@ -15,8 +15,10 @@
     { id: 1, done: false, text: 'make it clever 🦊' },
     { id: 0, done: false, text: 'make it svelte 🧈' },
   ])
+
   let todos = []
   let tid = 1
+
   onMount((params) => {
     todos = JSON.parse(localStorage.list)
     tid = JSON.parse(localStorage.tid) + 1
@@ -33,7 +35,7 @@
     storedList.set(todos)
     storedId.set(todo.id)
     newTodo = ''
-    /* //Todo refactor to loop and reassign key[id]: value 
+    /* //Todo refactor to loop and reassign key[id]: value ?
     todos.forEach((id) => {
       if (todo.id === id.id) {
         todo.id = tid + 100
@@ -61,9 +63,10 @@
   }
 
   afterUpdate(() => {
-    activeSort === 'Todo' ? (sortTodos = leftTodo) : activeSort === 'Done' ? (sortTodos = doneTodo) : (sortTodos = todos)
     storedList.set(todos)
+    activeSort === 'Todo' ? (sortTodos = leftTodo) : activeSort === 'Done' ? (sortTodos = doneTodo) : (sortTodos = todos)
   })
+  let thisSadVar = 'suk'
 </script>
 
 <svelte:head>
@@ -80,17 +83,17 @@
       <button disabled={!newTodo}>➕</button>
     </div>
   </form>
-  {#if todos.length === 0}
-    <p>Please add a task</p>
-  {:else if leftTodo.length === 0}
-    <p>Tasks complete</p>
-  {:else if leftTodo.length === 1}
-    <p>{leftTodo.length} task left</p>
-  {:else}
-    <p>{leftTodo.length} tasks left</p>
-  {/if}
 
   <Tabs {activeSort} {sorts} on:tabChange={tabChange}>
+    {#if process.browser && todos.length === 0}
+      <p>Please add a task</p>
+    {:else if leftTodo.length === 0}
+      <p>Tasks complete</p>
+    {:else if leftTodo.length === 1}
+      <p>{leftTodo.length} task left</p>
+    {:else}
+      <p>{leftTodo.length} tasks left</p>
+    {/if}
     {#each sortTodos as todo (todo.id)}
       <div class="task" animate:flip={{ duration: 350 }} transition:fly={{ x: 50, duration: 350 }}>
         <label class="container">
@@ -103,12 +106,9 @@
     {/each}
   </Tabs>
 </div>
+<div class="testScss">this is another test of the Scss import</div>
 
 <style lang="scss">
-  :global()body {
-    overflow-y: scroll;
-  }
-
   .wrap {
     max-width: 300px;
     margin: 0 auto;
@@ -139,14 +139,12 @@
     border: transparent;
     border-bottom: 2px solid darkgrey;
     outline: transparent;
-  }
-
-  #inputTask:hover {
-    border-bottom: 2px solid #2196f3;
-  }
-
-  #inputTask:focus {
-    border-bottom: 2px solid black;
+    &:hover {
+      border-bottom: 2px solid #2196f3;
+    }
+    &:focus {
+      border-bottom: 2px solid black;
+    }
   }
 
   #inputTask:focus + label,

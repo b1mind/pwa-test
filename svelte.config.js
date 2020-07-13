@@ -16,11 +16,9 @@ const preprocess = sveltePreprocess({
 } */
 
 const onwarn = (warning, onwarn) => {
-	if (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message))
-		return true
-	if (warning.message == 'Unused CSS selector')
-		return 
-	return onwarn(warning) 
+  if (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) return true
+  if (warning.message == 'Unused CSS selector') return
+  return onwarn(warning)
 }
 
 module.exports = {

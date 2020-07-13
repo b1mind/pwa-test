@@ -1,4 +1,4 @@
-<script>
+<script type="text/javascript">
   // brought over from my site cause why not components right?!?
   import { createEventDispatcher } from 'svelte'
 
@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<style type="text/scss">
+<style lang="scss">
   .tabs {
     margin-bottom: 1em;
   }

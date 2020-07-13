@@ -10,13 +10,20 @@ import pkg from './package.json'
 // import autoPreprocess from 'svelte-preprocess'
 // import { scss, coffeescript, pug } from 'svelte-preprocess'
 import sveltePreprocess from 'svelte-preprocess'
-
 const preprocess = sveltePreprocess({
   scss: true,
   pug: true,
   postcss: true,
+
   // ...
 })
+// not used right want it to replace css in rollup for sapper.
+/* import scss from 'rollup-plugin-scss'
+const scssOptions = {
+  output: true,
+  output: './static/css/bundle.css',
+  watch: './static/scss',
+} */
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
