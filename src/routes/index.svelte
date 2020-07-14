@@ -8,7 +8,7 @@
   //components
   import Tabs from '../components/shared/Tabs.svelte'
 
-  //Fixme 500 error because trying to access local storage in the wrong lifecycle.
+  //Fixme find a better way to do local storage without onMount
   let storedId = writable('tid', 3)
   let storedList = writable('list', [
     { id: 2, done: false, text: 'make it faster 🏃‍♀️' },
@@ -106,7 +106,6 @@
     {/each}
   </Tabs>
 </div>
-<div class="testScss">this is another test of the Scss import</div>
 
 <style lang="scss">
   .wrap {

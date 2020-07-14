@@ -4,7 +4,7 @@
 </script>
 
 <Nav {segment} />
-<div class="testScss">This is a test of Scss _layout</div>
+
 <main>
   <slot />
 </main>

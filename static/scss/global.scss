@@ -1,5 +1,9 @@
-.testScss {
-  color: violet;
+:root {
+  --color: skyblue;
+}
+
+::placeholder {
+  color: red;
 }
 
 body {
