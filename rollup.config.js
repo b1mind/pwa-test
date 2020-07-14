@@ -13,8 +13,14 @@ import sveltePreprocess from 'svelte-preprocess'
 const preprocess = sveltePreprocess({
   scss: true,
   pug: true,
-  postcss: true,
-
+  postcss: {
+    plugins: {
+      autoprefixer: {
+        grid: 'autoplace',
+        overrideBrowserslist: ['> 1%', 'last 2 versions', 'ie >= 11'],
+      },
+    },
+  },
   // ...
 })
 // not used right want it to replace css in rollup for sapper.
